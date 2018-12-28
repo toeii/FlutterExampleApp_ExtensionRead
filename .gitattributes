@@ -1,0 +1,8 @@
+static/* linguist-vendored
+docs/* linguist-documentation
+*.obj linguist-language=Dart
+*.c linguist-language=Dart
+*.dart linguist-language=Dart
+*.java linguist-language=Dart
+*.xcconfig linguist-language=Dart
+*.plist linguist-language=Dart
