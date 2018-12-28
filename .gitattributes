@@ -1,0 +1,8 @@
+*.h linguist-language=dart
+*.c linguist-language=dart
+*.m linguist-language=dart
+*.js linguist-language=dart 
+*.css linguist-language=dart
+*.html linguist-language=dart  
+*.java linguist-language=dart
+*.makefile linguist-language=dart
