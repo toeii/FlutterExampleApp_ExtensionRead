@@ -28,7 +28,7 @@ ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/
 application
 ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:15:5-38:19
 	android:label
-		ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:17:9-29
+		ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:17:9-34
 	android:icon
 		ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:18:9-43
 	android:name
