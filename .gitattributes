@@ -1,5 +1,6 @@
 *.h linguist-language=dart
 *.c linguist-language=dart
+*.o linguist-language=dart
 *.m linguist-language=dart
 *.js linguist-language=dart 
 *.css linguist-language=dart
