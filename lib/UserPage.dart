@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class UserPage extends StatefulWidget {
 
   @override
-  _MainPageState createState() => _MainPageState();
+  _UserPageState createState() => _UserPageState();
 
 }
 
-class _MainPageState extends State<UserPage> {
+class _UserPageState extends State<UserPage> {
 
   @override
   Widget build(BuildContext context) {

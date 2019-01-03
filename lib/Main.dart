@@ -54,26 +54,29 @@ class _MainPageState extends State<MainPage> {
 
     return Scaffold(
       body: _bodyPages[_pageIndex],
-      bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(
-                icon:Icon(Icons.home, size: 26.0),title:Text("首页")
-            ),
-            BottomNavigationBarItem(
-                icon:Icon(Icons.group, size: 26.0),title:Text("社区")
-            ),
-            BottomNavigationBarItem(
-                icon:Icon(Icons.person, size: 26.0),title:Text("我的")
-            ),
-          ],
-          type: BottomNavigationBarType.fixed,
-          currentIndex: _pageIndex,
-          onTap: (index) {
-            setState(() {
-              _pageIndex = index;
-            });
-          },
-
+      bottomNavigationBar:
+        Container(
+          height: 54,
+          child: BottomNavigationBar(
+            items: [
+              BottomNavigationBarItem(
+                  icon:Icon(Icons.home, size: 24.0),title:Text("首页",style : TextStyle(fontSize: 10,))
+              ),
+              BottomNavigationBarItem(
+                  icon:Icon(Icons.group, size: 24.0),title:Text("社区",style : TextStyle(fontSize: 10,))
+              ),
+              BottomNavigationBarItem(
+                  icon:Icon(Icons.person, size: 24.0),title:Text("我的",style : TextStyle(fontSize: 10,))
+              ),
+            ],
+            type: BottomNavigationBarType.fixed,
+            currentIndex: _pageIndex,
+            onTap: (index) {
+              setState(() {
+                _pageIndex = index;
+              });
+            },
+        ),
       ),
 
     );

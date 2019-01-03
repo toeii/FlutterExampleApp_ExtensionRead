@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class CommunityPage extends StatefulWidget {
 
   @override
-  _MainPageState createState() => _MainPageState();
+  _CommunityPageState createState() => _CommunityPageState();
 
 }
 
-class _MainPageState extends State<CommunityPage> {
+class _CommunityPageState extends State<CommunityPage> {
 
   @override
   Widget build(BuildContext context) {
