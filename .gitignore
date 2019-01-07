@@ -3,8 +3,11 @@
 .packages
 .pub/
 build/
+build/app/
 .flutter-plugins
 *.iml
 .idea/
 .gradle/
 ignoreConfig.dart
+android/.gradle/
+.idea/
