@@ -163,9 +163,9 @@ class EasyListViewState extends State<EasyListView> {
   bool _hasFooter() => widget.footerBuilder != null;
 
   final _defaultLoadMore = Container(
-    padding: const EdgeInsets.all(8.0),
+    padding: const EdgeInsets.all(4.0),
     child: const Center(
-      child: const CircularProgressIndicator(),
+        child: const CircularProgressIndicator(),
     ),
   );
 
