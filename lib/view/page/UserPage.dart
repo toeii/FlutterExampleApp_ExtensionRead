@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_extension_read/view/widget/EasyListView.dart';
 import 'dart:ui';
-
-import 'package:flutter_extension_read/widget/EasyListView.dart';
 
 class UserPage extends StatefulWidget {
 
@@ -14,10 +13,6 @@ class _UserPageState extends State<UserPage> {
 
   static Size _sizeWH = window.physicalSize;
   static var items = ["个人主页","浏览记录","切换主题","关于作者","注销账号"];
-
-  var headerBuilder = (context) => new Container(
-     height: 0,
-  );
 
   var itemBuilder = (context, index) => Container(
     alignment: AlignmentDirectional.center,
@@ -36,9 +31,8 @@ class _UserPageState extends State<UserPage> {
                 child: new Column(
                   children: <Widget>[
                     new Container(
-                      height: 220,
+                      height: 200,
                       width: _sizeWH.width,
-                      color: Colors.blue,
                       child: new Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -67,7 +61,7 @@ class _UserPageState extends State<UserPage> {
             )
           ),
         ),
-        preferredSize: Size.fromHeight(270),
+        preferredSize: Size.fromHeight(250),
       ),
 
       body: new EasyListView(

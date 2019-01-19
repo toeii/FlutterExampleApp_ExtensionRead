@@ -2,8 +2,9 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_extension_read/page/WebLoadPage.dart';
-import 'package:flutter_extension_read/widget/EasyListView.dart';
+import 'package:flutter_extension_read/model/AppConfig.dart';
+import 'package:flutter_extension_read/view/page/WebLoadPage.dart';
+import 'package:flutter_extension_read/view/widget/EasyListView.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
 class CommunityPage extends StatefulWidget {
@@ -19,16 +20,11 @@ class _CommunityPageState extends State<CommunityPage>{
 
   var itemCount = 20;
   var hasNextPage = true;
-  var foregroundWidget = Container(
-      alignment: AlignmentDirectional.center,
-//      child: CircularProgressIndicator()
-  );
+//  var foregroundWidget = Container( alignment: AlignmentDirectional.center, child: CircularProgressIndicator());
 
   @override
   void initState() {
     super.initState();
-    Timer(Duration(milliseconds: 3000),
-            () => setState(() => foregroundWidget = null));
   }
 
   @override
@@ -57,20 +53,19 @@ class _CommunityPageState extends State<CommunityPage>{
       preferredSize: Size.fromHeight(94),
     ),
 
-    body:
-    new Container(
+    body: new Container(
       child: RefreshIndicator(
         onRefresh: _refresh,
         child:  EasyListView(
 //      headerSliverBuilder: headerSliverBuilder,
           headerBuilder: headerBuilder,
-          footerBuilder: footerBuilder,
+//          footerBuilder: footerBuilder,
           itemCount: itemCount,
           itemBuilder: itemBuilder,
 //          dividerBuilder: dividerBuilder,
           loadMore: hasNextPage,
           onLoadMore: onLoadMoreEvent,
-          foregroundWidget: foregroundWidget,
+//          foregroundWidget: foregroundWidget,
         ),
       ),
     )
@@ -143,23 +138,11 @@ class _CommunityPageState extends State<CommunityPage>{
               },
               itemCount: 3,
               index: 0,
-              viewportFraction: 0.8,
+              viewportFraction: 0.88,
               scale: 0.9,
             ),
           ),
         ]
-    ),
-  );
-
-  var footerBuilder = (context) => Container(
-    height: 30.0,
-    alignment: AlignmentDirectional.center,
-    child: Text(
-      "没有更多了",
-      style: TextStyle(
-        fontSize: 14.0,
-        color: Colors.grey,
-      ),
     ),
   );
 
@@ -295,7 +278,7 @@ class _CommunityPageState extends State<CommunityPage>{
                           new Container(
                             margin:const EdgeInsets.fromLTRB(0,8,4,8),
                             padding:const EdgeInsets.fromLTRB(5,2,6,3),
-                            color: Colors.blue,
+                            color: AppConfig.themeColor,
                             child: new Text(
                               "人生学校1",
                               style: new TextStyle(
@@ -307,7 +290,7 @@ class _CommunityPageState extends State<CommunityPage>{
                           new Container(
                             margin:const EdgeInsets.fromLTRB(0,8,4,8),
                             padding:const EdgeInsets.fromLTRB(5,2,6,3),
-                            color: Colors.blue,
+                            color: AppConfig.themeColor,
                             child: new Text(
                               "人生学校2",
                               style: new TextStyle(

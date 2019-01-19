@@ -4,6 +4,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class EasyListView extends StatefulWidget {
+
+  final int itemCount;
+  final WidgetBuilder headerBuilder;
+  final WidgetBuilder loadMoreItemBuilder;
+  final IndexedWidgetBuilder itemBuilder;
+  final IndexedWidgetBuilder dividerBuilder;
+  final bool loadMore;
+  final bool loadMoreWhenNoData;
+  final VoidCallback onLoadMore;
+  final ScrollPhysics physics;
+  final ScrollController controller;
+  final NestedScrollViewHeaderSliversBuilder headerSliverBuilder;
+  final Widget foregroundWidget;
+  final EdgeInsetsGeometry padding;
+  final bool isSliverMode;
+  final WidgetBuilder footerBuilder;
+
   EasyListView({
     @required this.itemCount,
     @required this.itemBuilder,
@@ -26,31 +43,18 @@ class EasyListView extends StatefulWidget {
     // *Sliver mode will build all items when inited. (ListView item is built by lazy)*
   }) : assert(itemBuilder != null);
 
-  final int itemCount;
-  final WidgetBuilder headerBuilder;
-  final WidgetBuilder footerBuilder;
-  final WidgetBuilder loadMoreItemBuilder;
-  final IndexedWidgetBuilder itemBuilder;
-  final IndexedWidgetBuilder dividerBuilder;
-  final bool loadMore;
-  final bool loadMoreWhenNoData;
-  final VoidCallback onLoadMore;
-  final ScrollPhysics physics;
-  final ScrollController controller;
-  final NestedScrollViewHeaderSliversBuilder headerSliverBuilder;
-  final Widget foregroundWidget;
-  final EdgeInsetsGeometry padding;
-  final bool isSliverMode;
-
   @override
   State<StatefulWidget> createState() {
     return EasyListViewState();
   }
+
+
 }
 
 enum ItemType { header, footer, loadMore, data, dividerData }
 
 class EasyListViewState extends State<EasyListView> {
+
   @override
   Widget build(BuildContext context) => widget.headerSliverBuilder != null
       ? NestedScrollView(
@@ -170,4 +174,6 @@ class EasyListViewState extends State<EasyListView> {
   );
 
   final _defaultDivider = const Divider(color: Colors.grey);
+
+
 }

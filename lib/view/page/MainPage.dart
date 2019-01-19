@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_extension_read/model/AppConfig.dart';
 
-import 'package:flutter_extension_read/page/HomePage.dart';
-import 'package:flutter_extension_read/page/CommunityPage.dart';
-import 'package:flutter_extension_read/page/UserPage.dart';
+import 'package:flutter_extension_read/view/page/CommunityPage.dart';
+import 'package:flutter_extension_read/view/page/HomePage.dart';
+import 'package:flutter_extension_read/view/page/UserPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: '拓意 Exidea',
       theme: new ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: AppConfig.themeColor,
       ),
       debugShowCheckedModeBanner: true,
       home: new MainPage(),

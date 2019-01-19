@@ -11,7 +11,8 @@ class WebLoadPage extends StatefulWidget {
 class _WebLoadPageState extends State<WebLoadPage> {
   TextEditingController controller = TextEditingController();
   FlutterWebviewPlugin flutterWebviewPlugin = FlutterWebviewPlugin();
-  var urlString = "https://google.com";
+  var urlString = "https://www.baidu.com";
+  var title = "百度";
 
   launchUrl() {
     setState(() {
@@ -41,16 +42,10 @@ class _WebLoadPageState extends State<WebLoadPage> {
           style: TextStyle(color: Colors.white),
           decoration: InputDecoration(
             border: InputBorder.none,
-            hintText: "Enter Url Here",
+            hintText: title,
             hintStyle: TextStyle(color: Colors.white),
           ),
         ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.navigate_next),
-            onPressed: () => launchUrl(),
-          )
-        ],
       ),
       url: urlString,
       withZoom: false,

@@ -4,6 +4,18 @@ ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/
 INJECTED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:1:1-39:12
 INJECTED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:1:1-39:12
 INJECTED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:1:1-39:12
+MERGED from [:video_player] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/video_player/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
+MERGED from [:fluttertoast] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/fluttertoast/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
+MERGED from [:shared_preferences] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/shared_preferences/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
+MERGED from [:permission_handler] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/permission_handler/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
+MERGED from [:path_provider] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/path_provider/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_webview_plugin] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/flutter_webview_plugin/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/exoplayer-hls-2.9.1.aar/9217ce01e87a2795e1e69b3afad124e8/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/exoplayer-dash-2.9.1.aar/22b6febc9e6a65d57d82a1b139353d09/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/exoplayer-smoothstreaming-2.9.1.aar/82617edc5d6d33db8572d3d80df287e8/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/exoplayer-core-2.9.1.aar/263b83fa4c61ae75fac69d191575b1b3/AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/3471d6a2e3ecc7945b3b0c82b5a08523/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/79d1297a69608de4b9ed8fcb605491b0/AndroidManifest.xml:17:1-22:12
 INJECTED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:1:1-39:12
 INJECTED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:1:1-39:12
 INJECTED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:1:1-39:12
@@ -67,6 +79,28 @@ uses-sdk
 INJECTED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml
+MERGED from [:video_player] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/video_player/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:video_player] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/video_player/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/fluttertoast/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/fluttertoast/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/shared_preferences/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/shared_preferences/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/permission_handler/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/permission_handler/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/path_provider/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/path_provider/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/exoplayer-hls-2.9.1.aar/9217ce01e87a2795e1e69b3afad124e8/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/exoplayer-hls-2.9.1.aar/9217ce01e87a2795e1e69b3afad124e8/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/exoplayer-dash-2.9.1.aar/22b6febc9e6a65d57d82a1b139353d09/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/exoplayer-dash-2.9.1.aar/22b6febc9e6a65d57d82a1b139353d09/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/exoplayer-smoothstreaming-2.9.1.aar/82617edc5d6d33db8572d3d80df287e8/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/exoplayer-smoothstreaming-2.9.1.aar/82617edc5d6d33db8572d3d80df287e8/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/exoplayer-core-2.9.1.aar/263b83fa4c61ae75fac69d191575b1b3/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/exoplayer-core-2.9.1.aar/263b83fa4c61ae75fac69d191575b1b3/AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:support-compat:27.1.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/3471d6a2e3ecc7945b3b0c82b5a08523/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/3471d6a2e3ecc7945b3b0c82b5a08523/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/79d1297a69608de4b9ed8fcb605491b0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/79d1297a69608de4b9ed8fcb605491b0/AndroidManifest.xml:20:5-44
 INJECTED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
@@ -77,3 +111,13 @@ INJECTED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/andro
 		INJECTED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml
 		ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+IMPLIED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:1:1-39:12 reason: com.flutter_webview_plugin has a targetSdkVersion < 4
+uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:1:1-39:12 reason: com.flutter_webview_plugin has a targetSdkVersion < 4
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:1:1-39:12 reason: com.flutter_webview_plugin requested WRITE_EXTERNAL_STORAGE
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.exoplayer:exoplayer-core:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/exoplayer-core-2.9.1.aar/263b83fa4c61ae75fac69d191575b1b3/AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from [com.google.android.exoplayer:exoplayer-core:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/exoplayer-core-2.9.1.aar/263b83fa4c61ae75fac69d191575b1b3/AndroidManifest.xml:24:22-76
