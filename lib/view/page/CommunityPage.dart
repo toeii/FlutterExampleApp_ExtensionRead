@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_extension_read/model/AppConfig.dart';
+import 'package:flutter_extension_read/service/AppConfig.dart';
 import 'package:flutter_extension_read/view/page/WebLoadPage.dart';
 import 'package:flutter_extension_read/view/widget/EasyListView.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';

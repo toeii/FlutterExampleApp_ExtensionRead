@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_extension_read/service/AppApi.dart';
+import 'package:flutter_extension_read/service/AppConfig.dart';
 
 class AppHttpClient {
   static const String GET = "get";

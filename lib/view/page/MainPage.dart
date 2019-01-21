@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_extension_read/model/AppConfig.dart';
+import 'package:flutter_extension_read/service/AppConfig.dart';
 
 import 'package:flutter_extension_read/view/page/CommunityPage.dart';
 import 'package:flutter_extension_read/view/page/HomePage.dart';
