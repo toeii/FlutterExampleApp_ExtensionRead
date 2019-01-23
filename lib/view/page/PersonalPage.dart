@@ -43,7 +43,7 @@ class _PersonalPageState extends State<PersonalPage>{
             new Container(
               width: window.physicalSize.width,
               height:140,
-              color: AppConfig.themeColor,
+              color: AppConfig.THEME_COLOR,
             ),
             new Container(
               margin:const EdgeInsets.fromLTRB(10,10,10,10),
@@ -143,7 +143,7 @@ class _PersonalPageState extends State<PersonalPage>{
   @override
   Widget build(BuildContext context) {
     return new Container(
-      color: AppConfig.themeColor,
+      color: AppConfig.THEME_COLOR,
       child: RefreshIndicator(
         onRefresh: _refresh,
         child:  EasyListView(
@@ -238,7 +238,7 @@ class _PersonalPageState extends State<PersonalPage>{
                           new Container(
                             margin:const EdgeInsets.fromLTRB(0,8,4,8),
                             padding:const EdgeInsets.fromLTRB(5,2,6,3),
-                            color: AppConfig.themeColor,
+                            color: AppConfig.THEME_COLOR,
                             child: new Text(
                               "人生学校1",
                               style: new TextStyle(
@@ -251,7 +251,7 @@ class _PersonalPageState extends State<PersonalPage>{
                           new Container(
                             margin:const EdgeInsets.fromLTRB(0,8,4,8),
                             padding:const EdgeInsets.fromLTRB(5,2,6,3),
-                            color: AppConfig.themeColor,
+                            color: AppConfig.THEME_COLOR,
                             child: new Text(
                               "人生学校2",
                               style: new TextStyle(

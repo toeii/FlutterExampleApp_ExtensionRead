@@ -2,22 +2,32 @@ import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 class WebLoadPage extends StatefulWidget {
+  var title = "百度";
+  var url = "https://www.baidu.com";
 
   @override
-  _WebLoadPageState createState() => _WebLoadPageState();
+  _WebLoadPageState createState() => _WebLoadPageState(title,url);
+
+  WebLoadPage({Key key,@required this.title,@required this.url}):super(key:key);
 
 }
 
 class _WebLoadPageState extends State<WebLoadPage> {
   TextEditingController controller = TextEditingController();
   FlutterWebviewPlugin flutterWebviewPlugin = FlutterWebviewPlugin();
-  var urlString = "https://www.baidu.com";
-  var title = "百度";
+
+  var title;
+  var url;
+
+  _WebLoadPageState(String title,String url){
+    this.title = title;
+    this.url = url;
+  }
 
   launchUrl() {
     setState(() {
-      urlString = controller.text;
-      flutterWebviewPlugin.reloadUrl(urlString);
+      url = controller.text;
+      flutterWebviewPlugin.reloadUrl(url);
     });
   }
 
@@ -26,7 +36,9 @@ class _WebLoadPageState extends State<WebLoadPage> {
     super.initState();
 
     flutterWebviewPlugin.onStateChanged.listen((WebViewStateChanged wvs) {
-      print(wvs.type);
+      if(wvs.type.toString() == 'WebViewState.finishLoad'){
+        //web page finishLoad
+      }
     });
   }
 
@@ -47,7 +59,7 @@ class _WebLoadPageState extends State<WebLoadPage> {
           ),
         ),
       ),
-      url: urlString,
+      url: url,
       withZoom: false,
     );
   }

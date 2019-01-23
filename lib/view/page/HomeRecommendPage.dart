@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_extension_read/model/Home.dart';
+import 'package:flutter_extension_read/model/HomeRecommendBean.dart';
 import 'package:flutter_extension_read/service/AppConfig.dart';
 import 'package:flutter_extension_read/service/AppHttpClient.dart';
 import 'package:flutter_extension_read/view/page/PaperDetailPage.dart';
@@ -18,12 +18,14 @@ class HomeRecommendPage extends StatefulWidget {
 }
 
 class _HomeRecommendPageState extends State<HomeRecommendPage> {
-  int itemCount = 20;
-  bool hasNextPage = true;
 
   int page = 0;
-  List<ItemList> datas = [];
+  int itemCount = 20;
+  bool hasNextPage = true;
+  bool isLoadData = true;
+  var foregroundWidget = Container( alignment: AlignmentDirectional.center, child: CircularProgressIndicator());
 
+  List<ItemList> datas = [];
 
   @override
   void initState() {
@@ -53,8 +55,10 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> {
                 itemBuilder: (BuildContext contextHolder, int index) {
                   return _getBannerViewItem(contextHolder,index);
                 },
-                itemCount: 3,
+                loop: true,
+                autoplay: true,
                 index: 0,
+                itemCount: 5,
                 viewportFraction: 0.9,
                 scale: 0.9,
               ),
@@ -73,75 +77,80 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> {
 
 
   Widget _getBannerViewItem(BuildContext context,int index) {
-    return new Column(
-      children: <Widget>[
-        new Container(
-          child: new GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                new MaterialPageRoute(builder: (context) => new WebLoadPage()),
-              );
-            },
+    if(null != datas && datas.length>0){
+      return new Column(
+        children: <Widget>[
+          new Container(
+            child: new GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(builder: (context) => new WebLoadPage(title:datas[index].data.title,url:datas[index].data.webUrl.raw)),
+                );
+              },
+            ),
+            height: 150,
+            decoration: new BoxDecoration(
+              shape: BoxShape.rectangle,
+              borderRadius: new BorderRadius.circular(4.0),
+              image: new DecorationImage(
+                  image: new NetworkImage(null!=datas[index].data.cover?datas[index].data.cover.feed:AppConfig.DEF_IMAGE_URL),
+                  fit: BoxFit.cover),
+            ),
           ),
-          height: 150,
-          decoration: new BoxDecoration(
-            shape: BoxShape.rectangle,
-            borderRadius: new BorderRadius.circular(4.0),
-            image: new DecorationImage(
-                image: new NetworkImage(null!=datas[index].data.cover?datas[index].data.cover.feed:AppConfig.DefImageUrl),
-                fit: BoxFit.cover),
+          new Container(
+            child: new Row(
+              children: <Widget>[
+                new Container(
+                  child: new GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (context) => new PersonalPage()),
+                      );
+                    },
+                  ),
+                  margin: const EdgeInsets.fromLTRB(0, 10, 10, 10),
+                  width: 46,
+                  height: 46,
+                  decoration: new BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: new DecorationImage(
+                        image: new NetworkImage(null!=datas[index].data.author?datas[index].data.author.icon:AppConfig.DEF_IMAGE_URL),
+                        fit: BoxFit.fill),
+                  ),
+                ),
+                new Container(
+                  width: 300,
+                  child: new Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.max,
+                    children: <Widget>[
+                      new NotEmptyText(null!=datas[index].data.author?datas[index].data.author.name:"广告标题${index}",
+                          style: new TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          )),
+                      new NotEmptyText(null!=datas[index].data.author?datas[index].data.author.description:"广告内容${index}",
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: new TextStyle(
+                            color: Colors.black45,
+                            fontSize: 14,
+                          )),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
-        ),
-        new Container(
-          child: new Row(
-            children: <Widget>[
-              new Container(
-                child: new GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                          builder: (context) => new PersonalPage()),
-                    );
-                  },
-                ),
-                margin: const EdgeInsets.fromLTRB(0, 10, 10, 10),
-                width: 46,
-                height: 46,
-                decoration: new BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: new DecorationImage(
-                      image: new NetworkImage(null!=datas[index].data.author?datas[index].data.author.icon:AppConfig.DefImageUrl),
-                      fit: BoxFit.fill),
-                ),
-              ),
-              new Container(
-                width: 300,
-                child: new Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.max,
-                  children: <Widget>[
-                    new NotEmptyText(null!=datas[index].data.author?datas[index].data.author.name:"广告标题${index}",
-                        style: new TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        )),
-                    new NotEmptyText(null!=datas[index].data.author?datas[index].data.author.description:"广告内容${index}",
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: new TextStyle(
-                          color: Colors.black45,
-                          fontSize: 14,
-                        )),
-                  ],
-                ),
-              )
-            ],
-          ),
-        ),
-      ],
+        ],
+      );
+    }
+    return  new Container(
+      height: 0,
     );
   }
 
@@ -156,6 +165,7 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> {
           itemBuilder: getItemBuilder,
           loadMore: hasNextPage,
           onLoadMore: _requestMoreData,
+//          foregroundWidget: isLoadData?foregroundWidget:null,
         ),
       ),
     );
@@ -179,19 +189,21 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> {
   }
 
   void initData(){
-    String requestUrl = AppConfig.BaseUrl + "tabs/selected?date="+new DateTime.now().millisecondsSinceEpoch.toString()+"&page="+page.toString();
+    String requestUrl = AppConfig.BASE_URL + "tabs/selected?date="+new DateTime.now().millisecondsSinceEpoch.toString()+"&page="+page.toString();
     AppHttpClient.get(requestUrl, (data) {
       if(null != data) {
-        Home home = Home.fromJson(data);
+        HomeRecommendBean home = HomeRecommendBean.fromJson(data);
         if (null != home) {
           if(page>1){
             setState(() {
               hasNextPage = home.itemList.length > 0;
               datas += home.itemList;
+              isLoadData = false;
             });
           }else{
             setState(() {
               datas = home.itemList;
+              isLoadData = false;
             });
           }
         }
@@ -231,7 +243,7 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> {
               shape: BoxShape.rectangle,
               borderRadius: new BorderRadius.circular(4.0),
               image: new DecorationImage(
-                  image: new NetworkImage(null!=datas[index].data.cover?datas[index].data.cover.feed:AppConfig.DefImageUrl),
+                  image: new NetworkImage(null!=datas[index].data.cover?datas[index].data.cover.feed:AppConfig.DEF_IMAGE_URL),
                   fit: BoxFit.fill),
             ),
           ),
@@ -244,7 +256,7 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> {
                 decoration: new BoxDecoration(
                   shape: BoxShape.circle,
                   image: new DecorationImage(
-                      image: new NetworkImage(null!=datas[index].data.author?datas[index].data.author.icon:AppConfig.DefImageUrl),
+                      image: new NetworkImage(null!=datas[index].data.author?datas[index].data.author.icon:AppConfig.DEF_IMAGE_URL),
                       fit: BoxFit.fill),
                 ),
               ),
@@ -302,8 +314,8 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> {
                         shape: BoxShape.rectangle,
                         borderRadius: new BorderRadius.circular(4.0),
                         image: new DecorationImage(
-                            image: new NetworkImage(null!=tag[0].headerImage?tag[0].headerImage:AppConfig.DefImageUrl),
-                            fit: BoxFit.fill),
+                            image: new NetworkImage(null!=tag[0].headerImage?tag[0].headerImage:AppConfig.DEF_IMAGE_URL),
+                            fit: BoxFit.cover),
                       ),
                     ),
                     new Container(
@@ -354,7 +366,7 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> {
                         borderRadius: new BorderRadius.circular(4.0),
                         image: new DecorationImage(
                             image: new NetworkImage(tag[1].headerImage),
-                            fit: BoxFit.fill),
+                            fit: BoxFit.cover),
                       ),
                     ),
                     new Container(

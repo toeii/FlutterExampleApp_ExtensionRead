@@ -20,7 +20,7 @@ class _CommunityPageState extends State<CommunityPage>{
 
   var itemCount = 20;
   var hasNextPage = true;
-//  var foregroundWidget = Container( alignment: AlignmentDirectional.center, child: CircularProgressIndicator());
+  var foregroundWidget = Container( alignment: AlignmentDirectional.center, child: CircularProgressIndicator());
 
   @override
   void initState() {
@@ -196,7 +196,7 @@ class _CommunityPageState extends State<CommunityPage>{
          onTap: () {
            Navigator.push(
              context,
-             new MaterialPageRoute(builder: (context) => new WebLoadPage()),
+             new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'baidu',url:'www.baidu.com')),
            );
          },
        ),
@@ -278,7 +278,7 @@ class _CommunityPageState extends State<CommunityPage>{
                           new Container(
                             margin:const EdgeInsets.fromLTRB(0,8,4,8),
                             padding:const EdgeInsets.fromLTRB(5,2,6,3),
-                            color: AppConfig.themeColor,
+                            color: AppConfig.THEME_COLOR,
                             child: new Text(
                               "人生学校1",
                               style: new TextStyle(
@@ -290,7 +290,7 @@ class _CommunityPageState extends State<CommunityPage>{
                           new Container(
                             margin:const EdgeInsets.fromLTRB(0,8,4,8),
                             padding:const EdgeInsets.fromLTRB(5,2,6,3),
-                            color: AppConfig.themeColor,
+                            color: AppConfig.THEME_COLOR,
                             child: new Text(
                               "人生学校2",
                               style: new TextStyle(

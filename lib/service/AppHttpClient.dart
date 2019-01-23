@@ -5,14 +5,12 @@ class AppHttpClient {
   static const String GET = "get";
   static const String POST = "post";
 
-  //get请求
   static void get(String url, Function callBack,
       {Map<String, String> params, Function errorCallBack}) async {
     _request(url, callBack,
         method: GET, params: params, errorCallBack: errorCallBack);
   }
 
-  //post请求
   static void post(String url, Function callBack,
       {Map<String, String> params, Function errorCallBack}) async {
     _request(url, callBack,
@@ -68,7 +66,6 @@ class AppHttpClient {
 
       statusCode = response.statusCode;
 
-      //处理错误部分
       if (statusCode < 0) {
         errorMsg = "网络请求错误,状态码:" + statusCode.toString();
         _handError(errorCallBack, errorMsg);
@@ -84,7 +81,6 @@ class AppHttpClient {
     }
   }
 
-  //处理异常
   static void _handError(Function errorCallback, String errorMsg) {
     if (errorCallback != null) {
       errorCallback(errorMsg);

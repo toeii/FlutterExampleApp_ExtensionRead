@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: '拓意 Exidea',
       theme: new ThemeData(
-        primarySwatch: AppConfig.themeColor,
+        primarySwatch: AppConfig.THEME_COLOR,
       ),
       debugShowCheckedModeBanner: true,
       home: new MainPage(),
