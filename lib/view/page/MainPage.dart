@@ -29,64 +29,69 @@ class MainPage extends StatefulWidget {
 
 }
 
-class _MainPageState extends State<MainPage>  with TickerProviderStateMixin {
+class _MainPageState extends State<MainPage> {
 
   int _pageIndex = 0;
-  HomePage _homePage;
-  CommunityPage _communityPage;
-  UserPage _userPage;
+  List _bodyPages = [];
 
   @override
   void initState() {
     super.initState();
-    _homePage =  new HomePage();
-    _communityPage =  new CommunityPage();
-    _userPage =  new UserPage();
+    _bodyPages
+      ..add(new HomePage())
+      ..add(new CommunityPage())
+      ..add(new UserPage());
   }
 
   @override
   Widget build(BuildContext context) {
 
-    var _bodyPages = [
-      _homePage,
-      _communityPage,
-      _userPage,
-    ];
-
     return Scaffold(
-         body: _bodyPages[_pageIndex],
+         body:  Stack(
+           children: <Widget>[
+             new Offstage(
+               offstage: _pageIndex!=0,
+               child: _bodyPages[0],
+             ),
+             new Offstage(
+               offstage: _pageIndex!=1,
+               child: _bodyPages[1],
+             ),
+             new Offstage(
+               offstage: _pageIndex!=2,
+               child: _bodyPages[2],
+             ),
+           ],
+         ),
+//       body:_bodyPages[_pageIndex],  //TODO 解决BottomNavigationBar导致页面重新绘制的问题
          bottomNavigationBar:
             Container(
               height: 55,
-              child: _buildBottomNavigationBar(),
+              child: new BottomNavigationBar(
+                items: [
+                  new BottomNavigationBarItem(
+                      icon:new Icon(Icons.home, size: 24.0),title:new Text("首页",style : new TextStyle(fontSize: 10,))
+                  ),
+                  new BottomNavigationBarItem(
+                      icon:new Icon(Icons.group, size: 24.0),title:new Text("社区",style : new TextStyle(fontSize: 10,))
+                  ),
+                  new BottomNavigationBarItem(
+                      icon:new Icon(Icons.person, size: 24.0),title:new Text("我的",style : new TextStyle(fontSize: 10,))
+                  ),
+                ],
+                type: BottomNavigationBarType.fixed,
+                currentIndex: _pageIndex,
+                onTap: (index) {
+                  setState(() {
+                    _pageIndex = index;
+                  });
+                },
+              ),
           ),
     );
 
   }
 
-
-  BottomNavigationBar _buildBottomNavigationBar() {
-    return new BottomNavigationBar(
-      items: [
-        new BottomNavigationBarItem(
-            icon:new Icon(Icons.home, size: 24.0),title:new Text("首页",style : new TextStyle(fontSize: 10,))
-        ),
-        new BottomNavigationBarItem(
-            icon:new Icon(Icons.group, size: 24.0),title:new Text("社区",style : new TextStyle(fontSize: 10,))
-        ),
-        new BottomNavigationBarItem(
-            icon:new Icon(Icons.person, size: 24.0),title:new Text("我的",style : new TextStyle(fontSize: 10,))
-        ),
-      ],
-      type: BottomNavigationBarType.fixed,
-      currentIndex: _pageIndex,
-      onTap: (index) {
-        setState(() {
-          _pageIndex = index;
-        });
-      },
-    );
-  }
 
 }
 

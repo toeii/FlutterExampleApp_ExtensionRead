@@ -23,15 +23,9 @@
       <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/app.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/app.apk.sha1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/Home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/HomeRecommendBean.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/Home.g.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/service/AppConfig.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/service/AppConfig.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/service/AppHttpClient.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/service/AppHttpClient.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/page/CommunityPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/CommunityPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/page/HomeDailyPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/HomeDailyPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/page/HomeRecommendPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/HomeRecommendPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/page/MainPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/MainPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/page/PersonalPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/PersonalPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/page/WebLoadPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/WebLoadPage.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,11 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HomeRecommendPage.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomeRecommendPage.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/view/page/HomeRecommendPage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="167" selection-start-line="167" selection-end-line="167" />
+            <state relative-caret-position="139">
+              <caret line="19" column="98" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="98" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -67,8 +61,8 @@
       <file leaf-file-name="HomeDailyPage.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/view/page/HomeDailyPage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="78">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -79,8 +73,8 @@
       <file leaf-file-name="HomePage.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/view/page/HomePage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+            <state relative-caret-position="242">
+              <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -93,6 +87,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="72" column="6" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainPage.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/view/page/MainPage.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="56" column="39" lean-forward="true" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,8 +118,8 @@
       <file leaf-file-name="WebLoadPage.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/view/page/WebLoadPage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+            <state relative-caret-position="180">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -138,15 +144,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
               <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeDailyContentBean.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/model/HomeDailyContentBean.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="196" column="68" selection-start-line="196" selection-start-column="40" selection-end-line="196" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -244,17 +241,17 @@
         <option value="$PROJECT_DIR$/lib/model/Home.dart" />
         <option value="$PROJECT_DIR$/lib/view/widget/NotEmptyText.dart" />
         <option value="$PROJECT_DIR$/lib/service/AppApi.dart" />
-        <option value="$PROJECT_DIR$/lib/view/page/MainPage.dart" />
         <option value="$PROJECT_DIR$/lib/view/page/PersonalPage.dart" />
         <option value="$PROJECT_DIR$/lib/service/AppHttpClient.dart" />
         <option value="$PROJECT_DIR$/lib/service/AppConfig.dart" />
         <option value="$PROJECT_DIR$/lib/model/HomeRecommendBean.dart" />
         <option value="$PROJECT_DIR$/lib/model/HomeDailyBean.dart" />
         <option value="$PROJECT_DIR$/lib/model/HomeDailyContentBean.dart" />
-        <option value="$PROJECT_DIR$/lib/view/page/WebLoadPage.dart" />
         <option value="$PROJECT_DIR$/lib/view/page/CommunityPage.dart" />
-        <option value="$PROJECT_DIR$/lib/view/page/HomeDailyPage.dart" />
+        <option value="$PROJECT_DIR$/lib/view/page/WebLoadPage.dart" />
         <option value="$PROJECT_DIR$/lib/view/page/HomeRecommendPage.dart" />
+        <option value="$PROJECT_DIR$/lib/view/page/HomeDailyPage.dart" />
+        <option value="$PROJECT_DIR$/lib/view/page/MainPage.dart" />
       </list>
     </option>
   </component>
@@ -523,16 +520,16 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5016155" side_tool="true" weight="0.5648604" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50403875" side_tool="true" visible="true" weight="0.13793103" />
       <window_info anchor="bottom" id="Flutter Performance" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Dart Analysis" order="7" sideWeight="0.49676898" weight="0.29885057" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4951535" visible="true" weight="0.05090312" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49596122" visible="true" weight="0.13793103" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.5303777" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49919224" weight="0.100164205" />
       <window_info anchor="right" id="Flutter Outline" order="3" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24798061" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24798061" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32840723" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -821,16 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/page/MainPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/model/HomeRecommendBean.g.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state />
@@ -879,16 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/page/WebLoadPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Flutter/packages/flutter/lib/src/material/refresh_indicator.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -900,16 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="72" column="6" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/page/HomePage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -930,22 +897,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/page/HomeDailyPage.dart">
+    <entry file="file://$PROJECT_DIR$/lib/view/page/WebLoadPage.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="180">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/view/page/HomeRecommendPage.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="167" selection-start-line="167" selection-end-line="167" />
+        <state relative-caret-position="139">
+          <caret line="19" column="98" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="98" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view/page/HomePage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view/page/HomeDailyPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view/page/MainPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="56" column="39" lean-forward="true" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

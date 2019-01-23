@@ -6,7 +6,7 @@ class WebLoadPage extends StatefulWidget {
   var url = "https://www.baidu.com";
 
   @override
-  _WebLoadPageState createState() => _WebLoadPageState(title,url);
+  _WebLoadPageState createState() => _WebLoadPageState();
 
   WebLoadPage({Key key,@required this.title,@required this.url}):super(key:key);
 
@@ -16,18 +16,10 @@ class _WebLoadPageState extends State<WebLoadPage> {
   TextEditingController controller = TextEditingController();
   FlutterWebviewPlugin flutterWebviewPlugin = FlutterWebviewPlugin();
 
-  var title;
-  var url;
-
-  _WebLoadPageState(String title,String url){
-    this.title = title;
-    this.url = url;
-  }
-
   launchUrl() {
     setState(() {
-      url = controller.text;
-      flutterWebviewPlugin.reloadUrl(url);
+      widget.url = controller.text;
+      flutterWebviewPlugin.reloadUrl(widget.url);
     });
   }
 
@@ -54,12 +46,12 @@ class _WebLoadPageState extends State<WebLoadPage> {
           style: TextStyle(color: Colors.white),
           decoration: InputDecoration(
             border: InputBorder.none,
-            hintText: title,
+            hintText: widget.title,
             hintStyle: TextStyle(color: Colors.white),
           ),
         ),
       ),
-      url: url,
+      url: widget.url,
       withZoom: false,
     );
   }

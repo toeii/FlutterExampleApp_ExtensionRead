@@ -18,7 +18,7 @@ class HomeDailyPage extends StatefulWidget {
 
 }
 
-class _HomeDailyPageState extends State<HomeDailyPage> {
+class _HomeDailyPageState extends State<HomeDailyPage> with AutomaticKeepAliveClientMixin{
 
   Size _sizeWH = window.physicalSize;
 
@@ -31,13 +31,14 @@ class _HomeDailyPageState extends State<HomeDailyPage> {
   List<Data> datas = [];
 
   @override
+  bool get wantKeepAlive => true;
+
+  @override
   void initState() {
     super.initState();
 
     initData();
   }
-
-
 
   @override
   Widget build(BuildContext context) {

@@ -17,7 +17,7 @@ class HomeRecommendPage extends StatefulWidget {
   _HomeRecommendPageState createState() => _HomeRecommendPageState();
 }
 
-class _HomeRecommendPageState extends State<HomeRecommendPage> {
+class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKeepAliveClientMixin{
 
   int page = 0;
   int itemCount = 20;
@@ -26,6 +26,9 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> {
   var foregroundWidget = Container( alignment: AlignmentDirectional.center, child: CircularProgressIndicator());
 
   List<ItemList> datas = [];
+
+  @override
+  bool get wantKeepAlive => true;
 
   @override
   void initState() {
@@ -404,4 +407,5 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> {
           height: 0,
         );
   }
+
 }
