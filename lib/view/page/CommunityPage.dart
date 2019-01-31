@@ -122,7 +122,7 @@ class _CommunityPageState extends State<CommunityPage>{
           new Container(
             margin:const EdgeInsets.all(10),
             child: new Text(
-                "今日精选",
+                "缺少数据先放一放",
                 style: new TextStyle(
                   color: Colors.black,
                   fontSize: 22,
@@ -165,7 +165,7 @@ class _CommunityPageState extends State<CommunityPage>{
               shape: BoxShape.rectangle,
               borderRadius: new BorderRadius.circular(4.0),
               image: new DecorationImage(
-                  image: new NetworkImage( "https://avatars1.githubusercontent.com/u/11296934?s=460&v=4"),
+                  image: new NetworkImage(AppConfig.DEF_IMAGE_URL),
                   fit: BoxFit.fill),
             ),
           ),
@@ -179,7 +179,7 @@ class _CommunityPageState extends State<CommunityPage>{
               color: new Color(0x7F000000),
             ),
           ),
-          new Text("电影金句",
+          new Text("测试Tab",
               style:new TextStyle(
                 fontSize: 16,
                 color: Colors.white,
@@ -204,7 +204,7 @@ class _CommunityPageState extends State<CommunityPage>{
         shape: BoxShape.rectangle,
         borderRadius: new BorderRadius.circular(4.0),
         image: new DecorationImage(
-            image: new NetworkImage( "https://avatars1.githubusercontent.com/u/11296934?s=460&v=4"),
+            image: new NetworkImage(AppConfig.DEF_IMAGE_URL),
             fit: BoxFit.fill),
       ),
     );
@@ -227,7 +227,7 @@ class _CommunityPageState extends State<CommunityPage>{
                     decoration: new BoxDecoration(
                       shape: BoxShape.circle,
                       image: new DecorationImage(
-                          image: new NetworkImage( "https://avatars1.githubusercontent.com/u/11296934?s=460&v=4"),
+                          image: new NetworkImage(AppConfig.DEF_IMAGE_URL),
                           fit: BoxFit.fill),
                     ),
                   ),
@@ -238,7 +238,7 @@ class _CommunityPageState extends State<CommunityPage>{
                       mainAxisSize: MainAxisSize.max,
                       children: <Widget>[
                         new Text(
-                            "承认吧，人生学校人生学校",
+                            "测试数据测试数据测试数据",
                             style: new TextStyle(
                               color: Colors.black,
                               fontSize: 16,
@@ -246,7 +246,7 @@ class _CommunityPageState extends State<CommunityPage>{
                             )
                         ),
                         new Text(
-                            "人生学校 #科技",
+                            "测试数据 #测试数据",
                             style: new TextStyle(
                               color: Colors.black45,
                               fontSize: 14,
@@ -265,7 +265,7 @@ class _CommunityPageState extends State<CommunityPage>{
                     mainAxisSize: MainAxisSize.max,
                     children: <Widget>[
                       new Text(
-                        "人生学校人生学校人生学校人生学校人生学校人生学校人生学校人生学校人生学校人生学校人生学校人生学校人生学校",
+                        "测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据",
                         style: new TextStyle(
                           color: Colors.black45,
                           fontSize: 14,
@@ -280,7 +280,7 @@ class _CommunityPageState extends State<CommunityPage>{
                             padding:const EdgeInsets.fromLTRB(5,2,6,3),
                             color: AppConfig.THEME_COLOR,
                             child: new Text(
-                              "人生学校1",
+                              "测试数据1",
                               style: new TextStyle(
                                 color: Colors.white,
                                 fontSize: 12,
@@ -292,7 +292,7 @@ class _CommunityPageState extends State<CommunityPage>{
                             padding:const EdgeInsets.fromLTRB(5,2,6,3),
                             color: AppConfig.THEME_COLOR,
                             child: new Text(
-                              "人生学校2",
+                              "测试数据2",
                               style: new TextStyle(
                                 color: Colors.white,
                                 fontSize: 12,
@@ -309,7 +309,7 @@ class _CommunityPageState extends State<CommunityPage>{
                           shape: BoxShape.rectangle,
                           borderRadius: new BorderRadius.circular(4.0),
                           image: new DecorationImage(
-                              image: new NetworkImage( "https://avatars1.githubusercontent.com/u/11296934?s=460&v=4"),
+                              image: new NetworkImage(AppConfig.DEF_IMAGE_URL),
                               fit: BoxFit.fill),
                         ),
                       ),

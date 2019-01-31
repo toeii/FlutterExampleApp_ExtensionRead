@@ -32,9 +32,6 @@ class _PaperDetailPageState extends State<PaperDetailPage>{
             _isPlaying = isPlaying;
           });
         }
-      })
-      ..initialize().then((_) {
-        setState(() {});
       });
   }
 
@@ -44,7 +41,7 @@ class _PaperDetailPageState extends State<PaperDetailPage>{
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
         new Stack(
-        alignment: Alignment.center,
+          alignment: Alignment.center,
           children: <Widget>[
             new Container(
               width: window.physicalSize.width,

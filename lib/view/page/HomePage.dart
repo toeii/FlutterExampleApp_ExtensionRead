@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_extension_read/view/page/BrowseRecordPage.dart';
 import 'package:flutter_extension_read/view/page/HomeDailyPage.dart';
 import 'package:flutter_extension_read/view/page/HomeRecommendPage.dart';
 
@@ -69,7 +70,14 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                 ),
               ),
               new ListTile(leading: Icon(Icons.work),title: Text('个人主页'),),
-              new ListTile(leading: Icon(Icons.visibility),title: Text('浏览记录'),),
+              new ListTile(leading: Icon(Icons.visibility),title: Text('浏览记录'),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      new MaterialPageRoute(builder: (context) => new BrowseRecordPage(),)
+                  );
+                }
+              ),
               new ListTile(leading: Icon(Icons.build),title: Text('切换主题'),),
               new ListTile(leading: Icon(Icons.email),title: Text('关于作者'),),
               new ListTile(leading: Icon(Icons.swap_vertical_circle),title: Text('注销账号'),),

@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_extension_read/model/HomeDailyBean.dart';
 import 'package:flutter_extension_read/model/HomeDailyContentBean.dart';
 import 'package:flutter_extension_read/service/AppConfig.dart';
-import 'package:flutter_extension_read/service/AppHttpClient.dart';
+import 'package:flutter_extension_read/service/net/AppHttpClient.dart';
 import 'package:flutter_extension_read/view/page/WebLoadPage.dart';
 import 'package:flutter_extension_read/view/widget/EasyListView.dart';
 import 'package:flutter_extension_read/view/widget/NotEmptyText.dart';
@@ -114,6 +114,8 @@ class _HomeDailyPageState extends State<HomeDailyPage> with AutomaticKeepAliveCl
   }
 
   Widget getLvItemView(BuildContext context,int index) {
+    if(datas.length==0)return null;
+
     HomeDailyContentBean contentBean = HomeDailyContentBean.fromJson(json.decode(datas[index].content));
     if(null!=contentBean && null != contentBean.userInfo && null != contentBean.shareInfo && null != contentBean.shareInfo.weixinCoverImage){
       return new Container(
@@ -176,13 +178,14 @@ class _HomeDailyPageState extends State<HomeDailyPage> with AutomaticKeepAliveCl
               },
               child: new Container(
                 width: _sizeWH.width,
-                height: 400,
+                height: 240,
                 decoration: new BoxDecoration(
+                  color: Color(0xFFF3F3F5),
                 shape: BoxShape.rectangle,
                 borderRadius: new BorderRadius.circular(4.0),
                 image: new DecorationImage(
                 image: new NetworkImage(null!=contentBean.shareInfo && null!=contentBean.shareInfo.weixinCoverImage?contentBean.shareInfo.weixinCoverImage.url:AppConfig.DEF_IMAGE_URL),
-                fit: BoxFit.contain),
+                fit: BoxFit.cover),
                 ),
               ),
             ),

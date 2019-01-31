@@ -41,7 +41,6 @@ class HomeRecommendBean extends Object {
 
 }
 
-
 @JsonSerializable()
 class ItemList extends Object {
 

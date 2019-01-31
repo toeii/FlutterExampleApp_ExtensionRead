@@ -4,7 +4,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_extension_read/model/HomeRecommendBean.dart';
 import 'package:flutter_extension_read/service/AppConfig.dart';
-import 'package:flutter_extension_read/service/AppHttpClient.dart';
+import 'package:flutter_extension_read/service/net/AppHttpClient.dart';
 import 'package:flutter_extension_read/view/page/PaperDetailPage.dart';
 import 'package:flutter_extension_read/view/page/PersonalPage.dart';
 import 'package:flutter_extension_read/view/page/WebLoadPage.dart';
@@ -102,51 +102,51 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
             ),
           ),
           new Container(
-            child: new Row(
-              children: <Widget>[
-                new Container(
-                  child: new GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        new MaterialPageRoute(
-                            builder: (context) => new PersonalPage()),
-                      );
-                    },
+            child: new GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(
+                      builder: (context) => new PersonalPage(personalData: datas,icon: datas[index].data.author.icon,title: datas[index].data.author.name,description: datas[index].data.author.description)),
+                );
+              },
+              child: new Row(
+                children: <Widget>[
+                  new Container(
+                    margin: const EdgeInsets.fromLTRB(0, 10, 10, 10),
+                    width: 46,
+                    height: 46,
+                    decoration: new BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: new DecorationImage(
+                          image: new NetworkImage(null!=datas[index].data.author?datas[index].data.author.icon:AppConfig.DEF_IMAGE_URL),
+                          fit: BoxFit.fill),
+                    ),
                   ),
-                  margin: const EdgeInsets.fromLTRB(0, 10, 10, 10),
-                  width: 46,
-                  height: 46,
-                  decoration: new BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: new DecorationImage(
-                        image: new NetworkImage(null!=datas[index].data.author?datas[index].data.author.icon:AppConfig.DEF_IMAGE_URL),
-                        fit: BoxFit.fill),
-                  ),
-                ),
-                new Container(
-                  width: 300,
-                  child: new Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.max,
-                    children: <Widget>[
-                      new NotEmptyText(null!=datas[index].data.author?datas[index].data.author.name:"广告标题${index}",
-                          style: new TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          )),
-                      new NotEmptyText(null!=datas[index].data.author?datas[index].data.author.description:"广告内容${index}",
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: new TextStyle(
-                            color: Colors.black45,
-                            fontSize: 14,
-                          )),
-                    ],
-                  ),
-                )
-              ],
+                  new Container(
+                    width: 300,
+                    child: new Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.max,
+                      children: <Widget>[
+                        new NotEmptyText(null!=datas[index].data.author?datas[index].data.author.name:"广告标题${index}",
+                            style: new TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            )),
+                        new NotEmptyText(null!=datas[index].data.author?datas[index].data.author.description:"广告内容${index}",
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: new TextStyle(
+                              color: Colors.black45,
+                              fontSize: 14,
+                            )),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ],

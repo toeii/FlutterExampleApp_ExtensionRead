@@ -4,6 +4,7 @@ import 'package:flutter_extension_read/service/AppConfig.dart';
 import 'package:flutter_extension_read/view/page/CommunityPage.dart';
 import 'package:flutter_extension_read/view/page/HomePage.dart';
 import 'package:flutter_extension_read/view/page/UserPage.dart';
+import 'package:sqflite/sqflite.dart';
 
 void main() => runApp(MyApp());
 
@@ -34,13 +35,18 @@ class _MainPageState extends State<MainPage> {
   int _pageIndex = 0;
   List _bodyPages = [];
 
+  String _platformVersion = AppConfig.PLATFORM_VERSION;
+
   @override
   void initState() {
     super.initState();
     _bodyPages
       ..add(new HomePage())
-      ..add(new CommunityPage())
+      ..add(new CommunityPage()) //TODO 缺少数据先放一放
       ..add(new UserPage());
+
+    initPlatformState();
+
   }
 
   @override
@@ -90,6 +96,22 @@ class _MainPageState extends State<MainPage> {
           ),
     );
 
+  }
+
+  Future initPlatformState() async {
+    String platformVersion;
+    try {
+      platformVersion = await Sqflite.platformVersion;
+    } on Exception {
+      platformVersion = "Failed to get platform version";
+    }
+    if (!mounted) return;
+
+    setState(() {
+      _platformVersion = platformVersion;
+    });
+
+    print("running on: " + _platformVersion);
   }
 
 
