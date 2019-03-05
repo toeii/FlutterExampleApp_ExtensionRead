@@ -2,7 +2,11 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'HomeDailyBean.g.dart';
 
-
+/**
+ * Created by toeii
+ * Date: 2019-01-16
+ */
+///头条日报
 @JsonSerializable()
 class HomeDailyBean extends Object {
 

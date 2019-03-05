@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_extension_read/service/database/DatabaseHelper.dart';
 import 'package:flutter_extension_read/view/page/BrowseRecordPage.dart';
 import 'package:flutter_extension_read/view/page/HomeDailyPage.dart';
 import 'package:flutter_extension_read/view/page/HomeRecommendPage.dart';
-
+import 'package:flutter_extension_read/view/page/WebLoadPage.dart';
+import 'package:flutter_extension_read/view/widget/HomeDrawer.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+/**
+ * Created by toeii
+ * Date: 2019-01-16
+ */
+///首页
 class HomePage extends StatefulWidget {
 
   @override
@@ -14,9 +22,12 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   TabController _tabController;
 
+  DatabaseHelper _databaseHelper;
+
   @override
   void initState() {
     super.initState();
+    _databaseHelper = new DatabaseHelper();
     _tabController = new TabController(length: 2, vsync: this);
   }
 
@@ -56,39 +67,11 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       ]),
 
 
-      drawer: new Container(
-        width: 240,
-        child: new Drawer(
-          child: new ListView(
-            padding: const EdgeInsets.only(),
-            children: <Widget>[
-              new UserAccountsDrawerHeader(
-                accountName: new Text('Toeii'),
-                accountEmail: new Text('https://github.com/toeii'),
-                currentAccountPicture: new CircleAvatar(
-                  backgroundImage: new NetworkImage("https://avatars1.githubusercontent.com/u/11296934?s=460&v=4"),
-                ),
-              ),
-              new ListTile(leading: Icon(Icons.work),title: Text('个人主页'),),
-              new ListTile(leading: Icon(Icons.visibility),title: Text('浏览记录'),
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      new MaterialPageRoute(builder: (context) => new BrowseRecordPage(),)
-                  );
-                }
-              ),
-              new ListTile(leading: Icon(Icons.build),title: Text('切换主题'),),
-              new ListTile(leading: Icon(Icons.email),title: Text('关于作者'),),
-              new ListTile(leading: Icon(Icons.swap_vertical_circle),title: Text('注销账号'),),
-//              new AboutListTile(),
-            ],
-          ),
-        ),
-      ),
+      drawer: new HomeDrawer(),
 
     );
   }
+
 
 }
 

@@ -2,7 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
+/**
+ * Created by toeii
+ * Date: 2019-01-16
+ */
+///
 class EasyListView extends StatefulWidget {
 
   final int itemCount;
@@ -37,10 +41,6 @@ class EasyListView extends StatefulWidget {
     this.foregroundWidget,
     this.padding,
     this.isSliverMode = false,
-    // [Not Recommended]
-    // Sliver mode will discard a lot of ListView variables (likes physics, controller),
-    // and each of items must be sliver.
-    // *Sliver mode will build all items when inited. (ListView item is built by lazy)*
   }) : assert(itemBuilder != null);
 
   @override

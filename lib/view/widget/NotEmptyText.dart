@@ -1,5 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+/**
+ * Created by toeii
+ * Date: 2019-01-16
+ */
+///处理Text空数据报错
 class NotEmptyText extends StatelessWidget {
   /// Creates a text widget.
   ///

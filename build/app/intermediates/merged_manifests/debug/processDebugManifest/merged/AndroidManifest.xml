@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="16"
-        android:targetSdkVersion="27" />
+        android:targetSdkVersion="28" />
 
     <!--
          The INTERNET permission is required for development. Specifically,
@@ -27,9 +27,11 @@
     -->
     <application
         android:name="io.flutter.app.FlutterApplication"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="拓意 Exidea" >
+        android:label="拓意 Exidea"
+        android:usesCleartextTraffic="true" >
         <activity
             android:name="com.toeii.read.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"

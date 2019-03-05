@@ -1,13 +1,16 @@
-
 import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_extension_read/model/HomeRecommendBean.dart';
-import 'package:flutter_extension_read/service/AppConfig.dart';
+import 'package:flutter_extension_read/service/ERAppConfig.dart';
 import 'package:flutter_extension_read/view/widget/EasyListView.dart';
 import 'package:video_player/video_player.dart';
-
+/**
+ * Created by toeii
+ * Date: 2019-01-16
+ */
+///个人资料
 class PersonalPage extends StatefulWidget{
 
   List<ItemList> personalData = [];
@@ -53,7 +56,7 @@ class _PersonalPageState extends State<PersonalPage>{
                 decoration: new BoxDecoration(
                   shape: BoxShape.circle,
                   image: new DecorationImage(
-                      image: new NetworkImage(null!=widget.icon?widget.icon:AppConfig.DEF_IMAGE_URL),
+                      image: new NetworkImage(null!=widget.icon?widget.icon:ERAppConfig.DEF_IMAGE_URL),
                       fit: BoxFit.cover),
                 ),
               ),
@@ -203,7 +206,7 @@ class _PersonalPageState extends State<PersonalPage>{
                       decoration: new BoxDecoration(
                         shape: BoxShape.circle,
                         image: new DecorationImage(
-                            image: new NetworkImage(null!=dataItem.data.author?dataItem.data.author.icon:AppConfig.DEF_IMAGE_URL),
+                            image: new NetworkImage(null!=dataItem.data.author?dataItem.data.author.icon:ERAppConfig.DEF_IMAGE_URL),
                             fit: BoxFit.fill),
                       ),
                     ),
@@ -259,7 +262,7 @@ class _PersonalPageState extends State<PersonalPage>{
                               new Container(
                                 margin:const EdgeInsets.fromLTRB(0,8,4,8),
                                 padding:const EdgeInsets.fromLTRB(5,2,6,3),
-                                color: AppConfig.THEME_COLOR,
+                                color: Colors.blue,
                                 child: new Text(
                                   null != dataItem.data.tags && dataItem.data.tags.length>0 ?dataItem.data.tags[0].name:"",
                                   style: new TextStyle(
@@ -272,7 +275,7 @@ class _PersonalPageState extends State<PersonalPage>{
                               new Container(
                                 margin:const EdgeInsets.fromLTRB(0,8,4,8),
                                 padding:const EdgeInsets.fromLTRB(5,2,6,3),
-                                color: AppConfig.THEME_COLOR,
+                                color: Colors.blue,
                                 child: new Text(
                                   null != dataItem.data.tags && dataItem.data.tags.length>1?dataItem.data.tags[1].name:"",
                                   style: new TextStyle(
@@ -285,7 +288,7 @@ class _PersonalPageState extends State<PersonalPage>{
                               new Container(
                                 margin:const EdgeInsets.fromLTRB(0,8,4,8),
                                 padding:const EdgeInsets.fromLTRB(5,2,6,3),
-                                color: AppConfig.THEME_COLOR,
+                                color: Colors.blue,
                                 child: new Text(
                                   null != dataItem.data.tags && dataItem.data.tags.length>2?dataItem.data.tags[2].name:"",
                                   style: new TextStyle(
@@ -312,7 +315,7 @@ class _PersonalPageState extends State<PersonalPage>{
                                     shape: BoxShape.rectangle,
                                     borderRadius: new BorderRadius.circular(4.0),
                                     image: new DecorationImage(
-                                        image: new NetworkImage(null!=dataItem.data.cover?dataItem.data.cover.feed:AppConfig.DEF_IMAGE_URL),
+                                        image: new NetworkImage(null!=dataItem.data.cover?dataItem.data.cover.feed:ERAppConfig.DEF_IMAGE_URL),
                                         fit: BoxFit.cover),
                                   ),
                                 ),

@@ -1,10 +1,14 @@
 import 'dart:async';
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_extension_read/view/widget/EasyListView.dart';
 import 'package:video_player/video_player.dart';
 
+/**
+ * Created by toeii
+ * Date: 2019-01-16
+ */
+///文章详情
 class PaperDetailPage extends StatefulWidget {
 
   @override
@@ -16,7 +20,7 @@ class _PaperDetailPageState extends State<PaperDetailPage>{
 
   static VideoPlayerController _controller;
   var _isPlaying = false;
-  var _playUrl = "http://mov.bn.netease.com/open-movie/nos/flv/2015/12/31/SBB7M663L_hd.flv";
+  var _playUrl = "http://ali.cdn.kaiyanapp.com/2782c89527853e169c522e11d1bc474a.mp4?auth_key=1551796559-0-0-1129a49e14f7d3e2e6794c31fe340c63";
   var itemCount = 20;
   var hasNextPage = true;
 //  var foregroundWidget = Container( alignment: AlignmentDirectional.center, child: CircularProgressIndicator());
@@ -164,20 +168,31 @@ class _PaperDetailPageState extends State<PaperDetailPage>{
 
   @override
   Widget build(BuildContext context) {
-    return new Container(
-      color: Colors.black45,
-      child: RefreshIndicator(
-        onRefresh: _refresh,
-        child:  EasyListView(
-          headerBuilder: headerBuilder,
-          itemCount: 30,
-          itemBuilder: itemBuilder,
-          loadMore: hasNextPage,
-          onLoadMore: onLoadMoreEvent,
+    return new WillPopScope(
+      child: new Scaffold(
+          appBar: new AppBar(
+            title: new Text('text'),
+            centerTitle: true,
+          ),
+          body: new Container(
+            color: Colors.black45,
+            child: RefreshIndicator(
+              onRefresh: _refresh,
+              child:  EasyListView(
+                headerBuilder: headerBuilder,
+                itemCount: 30,
+                itemBuilder: itemBuilder,
+                loadMore: hasNextPage,
+                onLoadMore: onLoadMoreEvent,
 //          foregroundWidget: foregroundWidget,
-        ),
-      ),
+              ),
+            ),
+          )),
+      onWillPop:() {
+        Navigator.pop(context);
+      },
     );
+
   }
 
   Future<Null> _refresh() async {

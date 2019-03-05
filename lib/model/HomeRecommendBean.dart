@@ -2,7 +2,11 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'HomeRecommendBean.g.dart';
 
-
+/**
+ * Created by toeii
+ * Date: 2019-01-16
+ */
+///开眼推荐
 @JsonSerializable()
 class HomeRecommendBean extends Object {
 

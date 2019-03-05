@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-
+/**
+ * Created by toeii
+ * Date: 2019-01-16
+ */
+///处理appbar下线高度
 class BarBottomDivider extends Divider implements PreferredSizeWidget {
   BarBottomDivider({
     Key key,

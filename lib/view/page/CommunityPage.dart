@@ -2,11 +2,20 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_extension_read/service/AppConfig.dart';
+import 'package:flutter_extension_read/model/CommunityBean.dart';
+import 'package:flutter_extension_read/model/CommunityItemBean.dart';
+import 'package:flutter_extension_read/service/ERAppConfig.dart';
+import 'package:flutter_extension_read/service/database/DatabaseHelper.dart';
+import 'package:flutter_extension_read/service/net/ERAppHttpClient.dart';
 import 'package:flutter_extension_read/view/page/WebLoadPage.dart';
 import 'package:flutter_extension_read/view/widget/EasyListView.dart';
+import 'package:flutter_extension_read/view/widget/NotEmptyText.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-
+/**
+ * Created by toeii
+ * Date: 2019-01-16
+ */
+///社区
 class CommunityPage extends StatefulWidget {
 
   @override
@@ -14,18 +23,81 @@ class CommunityPage extends StatefulWidget {
 
 }
 
-class _CommunityPageState extends State<CommunityPage>{
+class _CommunityPageState extends State<CommunityPage> with AutomaticKeepAliveClientMixin{
 
   static Size _sizeWH = window.physicalSize;
 
-  var itemCount = 20;
-  var hasNextPage = true;
+  int page = 0;
+  bool hasNextPage = true;
+  bool isLoadData = true;
   var foregroundWidget = Container( alignment: AlignmentDirectional.center, child: CircularProgressIndicator());
+
+  @override
+  bool get wantKeepAlive => true;
+
+  List<TagItemList> headDatas = [];
+  List<ItemList> contentDatas = [];
+
+  int tagId = 0;
+  String tagName = '热门主题推荐';
 
   @override
   void initState() {
     super.initState();
+
+    initData();
   }
+
+  void initData(){
+    headDatas.clear();
+
+    String requestUrl = ERAppConfig.BASE_URL_V6 + "community/tab/rec?udid=10000&vc=451&vn=5.0&size=720X1424&deviceModel=PBAT00&first_channel=eyepetizer_market&last_channel=eyepetizer_market&system_version_code=27".toString();
+    AppHttpClient.get(requestUrl, (data) {
+      if(null != data) {
+        CommunityBean communityBean = CommunityBean.fromJson(data);
+        if (null != communityBean) {
+          for(var headData in communityBean.itemList){
+            if(headData.type == 'squareCardCollection'){
+              headDatas.addAll(headData.data.itemList);
+            }
+          }
+          if(headDatas.length>0){
+            initListData(headDatas[0].data.tagId,headDatas[0].data.tagName);
+          }
+        }
+      }
+    });
+
+  }
+
+  void initListData(int id,String name){
+    String requestUrl = ERAppConfig.BASE_URL_V6 + "tag/dynamics?id="+id.toString()+"&start="+contentDatas.length.toString()+"+&num=20".toString();
+    AppHttpClient.get(requestUrl, (data) {
+      if(null != data) {
+        CommunityItemBean communityItemBean = CommunityItemBean.fromJson(data);
+        if(null != communityItemBean){
+          if(page>1){
+            setState(() {
+              tagId = id;
+              tagName = name;
+              contentDatas += communityItemBean.itemList;
+              hasNextPage = communityItemBean.itemList.length > 0;
+              isLoadData = false;
+            });
+          }else{
+            setState(() {
+              tagId = id;
+              tagName = name;
+              contentDatas = communityItemBean.itemList;
+              hasNextPage = communityItemBean.itemList.length > 0;
+              isLoadData = false;
+            });
+          }
+        }
+      }
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -37,15 +109,12 @@ class _CommunityPageState extends State<CommunityPage>{
           title: new Container(
             height: 84,
             color: Colors.white,
-            child: new ListView(
+            child: new ListView.builder(
               scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                _getHorizontalItemView(),
-                _getHorizontalItemView(),
-                _getHorizontalItemView(),
-                _getHorizontalItemView(),
-                _getHorizontalItemView(),
-              ],
+              itemCount: headDatas.length,
+              itemBuilder: (context, index) {
+                return _getHorizontalItemView(context,index);
+              },
             ),
           ),
         ),
@@ -57,38 +126,46 @@ class _CommunityPageState extends State<CommunityPage>{
       child: RefreshIndicator(
         onRefresh: _refresh,
         child:  EasyListView(
-//      headerSliverBuilder: headerSliverBuilder,
           headerBuilder: headerBuilder,
-//          footerBuilder: footerBuilder,
-          itemCount: itemCount,
+          itemCount: contentDatas.length,
           itemBuilder: itemBuilder,
-//          dividerBuilder: dividerBuilder,
           loadMore: hasNextPage,
-          onLoadMore: onLoadMoreEvent,
-//          foregroundWidget: foregroundWidget,
+          onLoadMore: _requestMoreData,
+          foregroundWidget: isLoadData?foregroundWidget:null,
+          footerBuilder: isLoadData?null:footerBuilder,
         ),
       ),
     )
 
   );
 
+
+  var footerBuilder = (context) => Container(
+    height: 30.0,
+    alignment: AlignmentDirectional.center,
+    child: Text(
+      "没有更多了",
+      style: TextStyle(
+        fontSize: 14.0,
+        color: Colors.grey,
+      ),
+    ),
+  );
+
+
   Future<Null> _refresh() async {
-    Timer(Duration(milliseconds: 2000),() => setState(() {
-      //            _dataList.clear();
-    }),
-    );
-    //    await _loadFirstListData();
-    return ;
+    if (null != contentDatas && contentDatas.length > 0) {
+      contentDatas.clear();
+    }
+    page = 1;
+    initListData(tagId,tagName);
+//    initData();
+    return;
   }
 
-  onLoadMoreEvent() {
-    Timer(
-      Duration(milliseconds: 2000),
-          () => setState(() {
-        itemCount += 10;
-        hasNextPage = itemCount <= 30;
-      }),
-    );
+  _requestMoreData() {
+    page++;
+    initData();
   }
 
   Widget dividerBuilder(context, index) => Divider(
@@ -96,121 +173,97 @@ class _CommunityPageState extends State<CommunityPage>{
     height: 1.0,
   );
 
-  var headerSliverBuilder = (context, _) => [
-    SliverAppBar(
-      expandedHeight: 120.0,
-      pinned: true,
-      automaticallyImplyLeading: false,
-      backgroundColor: Colors.white,
-      flexibleSpace: FlexibleSpaceBar(
-        centerTitle: true,
-        title: Container(
-          child: Text(
-            "Sliver App Bar",
-            style: TextStyle(color: Colors.black),
+  Widget headerBuilder(BuildContext context) {
+    return new Container(
+      child: new Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          children: <Widget>[
+            new Container(
+              margin:const EdgeInsets.all(10),
+              child:  new NotEmptyText(tagName,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: new TextStyle(
+                    color: Colors.black,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  )),
+            ),
+          ]
+      ),
+    );
+  }
+
+
+  Widget itemBuilder(BuildContext context,int index) {
+    return
+      new GestureDetector(
+        onTap: () {
+
+        },
+        child: new Container(
+          alignment: AlignmentDirectional.center,
+          child:_getContentItemView(context,index),
+        ),
+      );
+  }
+
+  Widget _getHorizontalItemView(BuildContext context,int index) {
+    return
+      new GestureDetector(
+        onTap: () {
+          setState(() {
+            contentDatas = [];
+          });
+          page = 1;
+          tagId = headDatas[index].data.tagId;
+          tagName = headDatas[index].data.tagName;
+          isLoadData = false;
+          initListData(tagId,tagName);
+        },
+        child: new Container(
+          child: new Stack(
+            alignment: Alignment.center,
+            children: <Widget>[
+              new Container(
+                width: 120,
+                height: 60,
+                margin:const EdgeInsets.fromLTRB(5,10,5,10),
+                decoration: new BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  borderRadius: new BorderRadius.circular(4.0),
+                  image: new DecorationImage(
+                      image: new NetworkImage(null!=headDatas[index].data.bgPicture?headDatas[index].data.bgPicture:ERAppConfig.DEF_IMAGE_URL),
+                      fit: BoxFit.fill),
+                ),
+              ),
+              new Container(
+                width: 120,
+                height: 60,
+                margin:const EdgeInsets.fromLTRB(5,10,5,10),
+                decoration: new BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  borderRadius: new BorderRadius.circular(4.0),
+                  color: new Color(0x7F000000),
+                ),
+              ),
+              new NotEmptyText(null!=headDatas[index].data.tagName?headDatas[index].data.tagName:"Tag${index}",
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: new TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  )
+              ),
+            ],
           ),
         ),
-      ),
-    ),
-  ];
+      );
 
-  var headerBuilder = (context) => new Container(
-    child: new Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.max,
-        children: <Widget>[
-          new Container(
-            margin:const EdgeInsets.all(10),
-            child: new Text(
-                "缺少数据先放一放",
-                style: new TextStyle(
-                  color: Colors.black,
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                )
-            ),
-          ),
-          new Container(
-            height: 180,
-            child: new Swiper(
-              itemBuilder: (BuildContext contextHolder,int index){
-                return _getBannerViewItem(contextHolder);
-              },
-              itemCount: 3,
-              index: 0,
-              viewportFraction: 0.88,
-              scale: 0.9,
-            ),
-          ),
-        ]
-    ),
-  );
-
-  var itemBuilder = (context, index) => Container(
-    alignment: AlignmentDirectional.center,
-    child: _getContentItemView(),
-  );
-
-
-  static Widget _getHorizontalItemView() {
-    return new Container(
-      child: new Stack(
-        alignment: Alignment.center,
-        children: <Widget>[
-          new Container(
-            width: 120,
-            height: 60,
-            margin:const EdgeInsets.fromLTRB(5,10,5,10),
-            decoration: new BoxDecoration(
-              shape: BoxShape.rectangle,
-              borderRadius: new BorderRadius.circular(4.0),
-              image: new DecorationImage(
-                  image: new NetworkImage(AppConfig.DEF_IMAGE_URL),
-                  fit: BoxFit.fill),
-            ),
-          ),
-          new Container(
-            width: 120,
-            height: 60,
-            margin:const EdgeInsets.fromLTRB(5,10,5,10),
-            decoration: new BoxDecoration(
-              shape: BoxShape.rectangle,
-              borderRadius: new BorderRadius.circular(4.0),
-              color: new Color(0x7F000000),
-            ),
-          ),
-          new Text("测试Tab",
-              style:new TextStyle(
-                fontSize: 16,
-                color: Colors.white,
-              )
-          ),
-        ],
-      ),
-    );
   }
 
-  static Widget _getBannerViewItem(BuildContext context) {
-    return  new Container(
-       child: new GestureDetector(
-         onTap: () {
-           Navigator.push(
-             context,
-             new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'baidu',url:'www.baidu.com')),
-           );
-         },
-       ),
-      decoration: new BoxDecoration(
-        shape: BoxShape.rectangle,
-        borderRadius: new BorderRadius.circular(4.0),
-        image: new DecorationImage(
-            image: new NetworkImage(AppConfig.DEF_IMAGE_URL),
-            fit: BoxFit.fill),
-      ),
-    );
-  }
-
-  static Widget _getContentItemView() {
+  Widget _getContentItemView(BuildContext context,int index) {
     return  new Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.max,
@@ -227,7 +280,7 @@ class _CommunityPageState extends State<CommunityPage>{
                     decoration: new BoxDecoration(
                       shape: BoxShape.circle,
                       image: new DecorationImage(
-                          image: new NetworkImage(AppConfig.DEF_IMAGE_URL),
+                          image: new NetworkImage(null!=contentDatas[index].data.header.icon?contentDatas[index].data.header.icon:ERAppConfig.DEF_IMAGE_URL),
                           fit: BoxFit.fill),
                     ),
                   ),
@@ -237,16 +290,18 @@ class _CommunityPageState extends State<CommunityPage>{
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisSize: MainAxisSize.max,
                       children: <Widget>[
-                        new Text(
-                            "测试数据测试数据测试数据",
-                            style: new TextStyle(
-                              color: Colors.black,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            )
+                        new NotEmptyText(null!=contentDatas[index].data.header.issuerName?contentDatas[index].data.header.issuerName:"用户1000${index}",
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: new TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          )
                         ),
+
                         new Text(
-                            "测试数据 #测试数据",
+                            "发布：",
                             style: new TextStyle(
                               color: Colors.black45,
                               fontSize: 14,
@@ -259,58 +314,29 @@ class _CommunityPageState extends State<CommunityPage>{
                 ],
               ),
               new Container(
-                  margin:const EdgeInsets.fromLTRB(0,5,0,0),
+                  margin:const EdgeInsets.fromLTRB(0,10,0,0),
                   child: new Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.max,
                     children: <Widget>[
-                      new Text(
-                        "测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据",
-                        style: new TextStyle(
-                          color: Colors.black45,
-                          fontSize: 14,
-                        ),
-                        maxLines: 3,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      new Row(
-                        children: <Widget>[
-                          new Container(
-                            margin:const EdgeInsets.fromLTRB(0,8,4,8),
-                            padding:const EdgeInsets.fromLTRB(5,2,6,3),
-                            color: AppConfig.THEME_COLOR,
-                            child: new Text(
-                              "测试数据1",
-                              style: new TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                              ),
-                            ),
-                          ),
-                          new Container(
-                            margin:const EdgeInsets.fromLTRB(0,8,4,8),
-                            padding:const EdgeInsets.fromLTRB(5,2,6,3),
-                            color: AppConfig.THEME_COLOR,
-                            child: new Text(
-                              "测试数据2",
-                              style: new TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                              ),
-                            ),
-                          ),
-                        ],
+                      new NotEmptyText(null!=contentDatas[index].data.content.data.description?contentDatas[index].data.content.data.description:"",
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis,
+                          style: new TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                          )
                       ),
                       new Container(
                         width: _sizeWH.width,
-                        height: 200,
-                        margin: const EdgeInsets.fromLTRB(0,0,0,20),
+                        height: null!=contentDatas[index].data.content.data.cover?200:0,
+                        margin: const EdgeInsets.fromLTRB(0,10,0,20),
                         decoration: new BoxDecoration(
                           shape: BoxShape.rectangle,
                           borderRadius: new BorderRadius.circular(4.0),
                           image: new DecorationImage(
-                              image: new NetworkImage(AppConfig.DEF_IMAGE_URL),
-                              fit: BoxFit.fill),
+                              image: new NetworkImage(null!=contentDatas[index].data.content.data.cover&&null!=contentDatas[index].data.content.data.cover.feed?contentDatas[index].data.content.data.cover.feed:ERAppConfig.DEF_IMAGE_URL),
+                              fit: BoxFit.cover),
                         ),
                       ),
                       new Divider(),

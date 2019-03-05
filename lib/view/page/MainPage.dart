@@ -1,24 +1,43 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_extension_read/service/AppConfig.dart';
+import 'package:flutter_extension_read/service/ERAppConfig.dart';
+import 'package:flutter_extension_read/service/redux/ERAppState.dart';
 
 import 'package:flutter_extension_read/view/page/CommunityPage.dart';
 import 'package:flutter_extension_read/view/page/HomePage.dart';
 import 'package:flutter_extension_read/view/page/UserPage.dart';
+import 'package:flutter_redux/flutter_redux.dart';
+import 'package:redux/redux.dart';
 import 'package:sqflite/sqflite.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+
+  final store = new Store<ERAppState>(
+    appReducer,
+    ///init store
+    initialState: new ERAppState(
+        themeData: new ThemeData(
+          primarySwatch: ERAppConfig.primarySwatch,
+        ),
+      ),
+  );
+
+
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: '拓意 Exidea',
-      theme: new ThemeData(
-        primarySwatch: AppConfig.THEME_COLOR,
-      ),
-      debugShowCheckedModeBanner: true,
-      home: new MainPage(),
+    return new StoreProvider(
+      store: store,
+      child: new StoreBuilder<ERAppState>(builder: (context, store) {
+        return new MaterialApp(
+            title: '拓意 Exidea',
+            debugShowCheckedModeBanner: true,
+            home: new MainPage(),
+            theme: store.state.themeData,
+          );
+      }),
     );
+
   }
 }
 
@@ -35,14 +54,14 @@ class _MainPageState extends State<MainPage> {
   int _pageIndex = 0;
   List _bodyPages = [];
 
-  String _platformVersion = AppConfig.PLATFORM_VERSION;
+  String _platformVersion = ERAppConfig.PLATFORM_VERSION;
 
   @override
   void initState() {
     super.initState();
     _bodyPages
       ..add(new HomePage())
-      ..add(new CommunityPage()) //TODO 缺少数据先放一放
+      ..add(new CommunityPage())
       ..add(new UserPage());
 
     initPlatformState();
@@ -69,7 +88,7 @@ class _MainPageState extends State<MainPage> {
              ),
            ],
          ),
-//       body:_bodyPages[_pageIndex],  //TODO 解决BottomNavigationBar导致页面重新绘制的问题
+//       body:_bodyPages[_pageIndex],  //解决BottomNavigationBar导致页面重新绘制的问题
          bottomNavigationBar:
             Container(
               height: 55,

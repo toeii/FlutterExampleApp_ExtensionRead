@@ -1,6 +1,10 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_extension_read/service/AppConfig.dart';
-
+import 'package:flutter_extension_read/service/ERAppConfig.dart';
+/**
+ * Created by toeii
+ * Date: 2019-01-16
+ */
+///网络处理类
 class AppHttpClient {
   static const String GET = "get";
   static const String POST = "post";

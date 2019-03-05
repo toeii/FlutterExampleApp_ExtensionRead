@@ -3,14 +3,20 @@ import 'dart:convert';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_extension_read/model/BrowseRecordBean.dart';
 import 'package:flutter_extension_read/model/HomeDailyBean.dart';
 import 'package:flutter_extension_read/model/HomeDailyContentBean.dart';
-import 'package:flutter_extension_read/service/AppConfig.dart';
-import 'package:flutter_extension_read/service/net/AppHttpClient.dart';
+import 'package:flutter_extension_read/service/ERAppConfig.dart';
+import 'package:flutter_extension_read/service/database/DatabaseHelper.dart';
+import 'package:flutter_extension_read/service/net/ERAppHttpClient.dart';
 import 'package:flutter_extension_read/view/page/WebLoadPage.dart';
 import 'package:flutter_extension_read/view/widget/EasyListView.dart';
 import 'package:flutter_extension_read/view/widget/NotEmptyText.dart';
-
+/**
+ * Created by toeii
+ * Date: 2019-01-16
+ */
+///日报
 class HomeDailyPage extends StatefulWidget {
 
   @override
@@ -33,10 +39,12 @@ class _HomeDailyPageState extends State<HomeDailyPage> with AutomaticKeepAliveCl
   @override
   bool get wantKeepAlive => true;
 
+  DatabaseHelper _databaseHelper;
+
   @override
   void initState() {
     super.initState();
-
+    _databaseHelper = new DatabaseHelper();
     initData();
   }
 
@@ -58,7 +66,6 @@ class _HomeDailyPageState extends State<HomeDailyPage> with AutomaticKeepAliveCl
     );
   }
 
-  // 下拉刷新
   Future<Null> _refresh() async {
     if (null != datas && datas.length > 0) {
       datas.clear();
@@ -68,7 +75,6 @@ class _HomeDailyPageState extends State<HomeDailyPage> with AutomaticKeepAliveCl
     return;
   }
 
-  // 上拉加载
   _requestMoreData() {
 //    page++;
 //    initData();
@@ -91,7 +97,7 @@ class _HomeDailyPageState extends State<HomeDailyPage> with AutomaticKeepAliveCl
 
 
   void initData(){
-    String requestUrl = AppConfig.BASE_URL_TT + "?category=news_hot";
+    String requestUrl = ERAppConfig.BASE_URL_TT + "?category=news_hot";
     AppHttpClient.get(requestUrl, (data) {
       if(null != data) {
         HomeDailyBean homeDailyBean = HomeDailyBean.fromJson(data);
@@ -133,7 +139,7 @@ class _HomeDailyPageState extends State<HomeDailyPage> with AutomaticKeepAliveCl
                   decoration: new BoxDecoration(
                     shape: BoxShape.circle,
                     image: new DecorationImage(
-                        image: new NetworkImage(null!=contentBean.userInfo?contentBean.userInfo.avatarUrl:AppConfig.DEF_IMAGE_URL),
+                        image: new NetworkImage(null!=contentBean.userInfo?contentBean.userInfo.avatarUrl:ERAppConfig.DEF_IMAGE_URL),
                         fit: BoxFit.cover),
                   ),
                 ),
@@ -171,6 +177,9 @@ class _HomeDailyPageState extends State<HomeDailyPage> with AutomaticKeepAliveCl
 
             new GestureDetector(
               onTap: () {
+
+                _databaseHelper.saveNote(new BrowseRecordBean(contentBean.itemId,contentBean.itemId.toString(),contentBean.title,contentBean.contentDecoration,contentBean.displayUrl,null!=contentBean.shareInfo && null!=contentBean.shareInfo.weixinCoverImage?contentBean.shareInfo.weixinCoverImage.url:ERAppConfig.DEF_IMAGE_URL));
+
                 Navigator.push(
                   context,
                   new MaterialPageRoute(builder: (context) => new WebLoadPage(title:contentBean.title,url:contentBean.displayUrl)),
@@ -184,7 +193,7 @@ class _HomeDailyPageState extends State<HomeDailyPage> with AutomaticKeepAliveCl
                 shape: BoxShape.rectangle,
                 borderRadius: new BorderRadius.circular(4.0),
                 image: new DecorationImage(
-                image: new NetworkImage(null!=contentBean.shareInfo && null!=contentBean.shareInfo.weixinCoverImage?contentBean.shareInfo.weixinCoverImage.url:AppConfig.DEF_IMAGE_URL),
+                image: new NetworkImage(null!=contentBean.shareInfo && null!=contentBean.shareInfo.weixinCoverImage?contentBean.shareInfo.weixinCoverImage.url:ERAppConfig.DEF_IMAGE_URL),
                 fit: BoxFit.cover),
                 ),
               ),

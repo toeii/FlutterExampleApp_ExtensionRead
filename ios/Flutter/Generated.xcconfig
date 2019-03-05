@@ -1,6 +1,6 @@
 // This is a generated file; do not edit or check into version control.
 FLUTTER_ROOT=/Users/Toeii/Library/Flutter
-FLUTTER_APPLICATION_PATH=/Users/Toeii/FlutterProjects/flutter_extension_read
+FLUTTER_APPLICATION_PATH=/Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead
 FLUTTER_TARGET=lib/main.dart
 FLUTTER_BUILD_DIR=build
 SYMROOT=${SOURCE_ROOT}/../build/ios

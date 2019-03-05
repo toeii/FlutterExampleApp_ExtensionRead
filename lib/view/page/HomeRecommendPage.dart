@@ -2,16 +2,22 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_extension_read/model/BrowseRecordBean.dart';
 import 'package:flutter_extension_read/model/HomeRecommendBean.dart';
-import 'package:flutter_extension_read/service/AppConfig.dart';
-import 'package:flutter_extension_read/service/net/AppHttpClient.dart';
+import 'package:flutter_extension_read/service/ERAppConfig.dart';
+import 'package:flutter_extension_read/service/database/DatabaseHelper.dart';
+import 'package:flutter_extension_read/service/net/ERAppHttpClient.dart';
 import 'package:flutter_extension_read/view/page/PaperDetailPage.dart';
 import 'package:flutter_extension_read/view/page/PersonalPage.dart';
 import 'package:flutter_extension_read/view/page/WebLoadPage.dart';
 import 'package:flutter_extension_read/view/widget/EasyListView.dart';
 import 'package:flutter_extension_read/view/widget/NotEmptyText.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-
+/**
+ * Created by toeii
+ * Date: 2019-01-16
+ */
+///推荐
 class HomeRecommendPage extends StatefulWidget {
   @override
   _HomeRecommendPageState createState() => _HomeRecommendPageState();
@@ -22,7 +28,7 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
   int page = 0;
   int itemCount = 20;
   bool hasNextPage = true;
-  bool isLoadData = true;
+  bool isLoadData = false;
   var foregroundWidget = Container( alignment: AlignmentDirectional.center, child: CircularProgressIndicator());
 
   List<ItemList> datas = [];
@@ -30,10 +36,12 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
   @override
   bool get wantKeepAlive => true;
 
+  DatabaseHelper _databaseHelper;
+
   @override
   void initState() {
     super.initState();
-
+    _databaseHelper = new DatabaseHelper();
     initData();
   }
 
@@ -71,6 +79,8 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
   }
 
 
+
+
   Widget getItemBuilder(BuildContext context,int index) {
     return new Container(
       alignment: AlignmentDirectional.center,
@@ -86,6 +96,9 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
           new Container(
             child: new GestureDetector(
               onTap: () {
+
+               _databaseHelper.saveNote(new BrowseRecordBean(datas[index].data.id,datas[index].data.id.toString(),datas[index].data.title,datas[index].data.description,datas[index].data.webUrl.raw,datas[index].data.cover.feed));
+
                 Navigator.push(
                   context,
                   new MaterialPageRoute(builder: (context) => new WebLoadPage(title:datas[index].data.title,url:datas[index].data.webUrl.raw)),
@@ -97,7 +110,7 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
               shape: BoxShape.rectangle,
               borderRadius: new BorderRadius.circular(4.0),
               image: new DecorationImage(
-                  image: new NetworkImage(null!=datas[index].data.cover?datas[index].data.cover.feed:AppConfig.DEF_IMAGE_URL),
+                  image: new NetworkImage(null!=datas[index].data.cover?datas[index].data.cover.feed:ERAppConfig.DEF_IMAGE_URL),
                   fit: BoxFit.cover),
             ),
           ),
@@ -119,7 +132,7 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
                     decoration: new BoxDecoration(
                       shape: BoxShape.circle,
                       image: new DecorationImage(
-                          image: new NetworkImage(null!=datas[index].data.author?datas[index].data.author.icon:AppConfig.DEF_IMAGE_URL),
+                          image: new NetworkImage(null!=datas[index].data.author?datas[index].data.author.icon:ERAppConfig.DEF_IMAGE_URL),
                           fit: BoxFit.fill),
                     ),
                   ),
@@ -168,13 +181,26 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
           itemBuilder: getItemBuilder,
           loadMore: hasNextPage,
           onLoadMore: _requestMoreData,
-//          foregroundWidget: isLoadData?foregroundWidget:null,
+          footerBuilder: isLoadData?null:footerBuilder,
+          foregroundWidget: isLoadData?foregroundWidget:null,
         ),
       ),
     );
   }
 
-  // 下拉刷新
+
+  var footerBuilder = (context) => Container(
+    height: 30.0,
+    alignment: AlignmentDirectional.center,
+    child: Text(
+      "没有更多了",
+      style: TextStyle(
+        fontSize: 14.0,
+        color: Colors.grey,
+      ),
+    ),
+  );
+
   Future<Null> _refresh() async {
     if (null != datas && datas.length > 0) {
       datas.clear();
@@ -184,7 +210,6 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
     return;
   }
 
-  // 上拉加载
   _requestMoreData() {
     page++;
     print('page = $page');
@@ -192,7 +217,7 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
   }
 
   void initData(){
-    String requestUrl = AppConfig.BASE_URL + "tabs/selected?date="+new DateTime.now().millisecondsSinceEpoch.toString()+"&page="+page.toString();
+    String requestUrl = ERAppConfig.BASE_URL + "tabs/selected?date="+new DateTime.now().millisecondsSinceEpoch.toString()+"&page="+page.toString();
     AppHttpClient.get(requestUrl, (data) {
       if(null != data) {
         HomeRecommendBean home = HomeRecommendBean.fromJson(data);
@@ -246,7 +271,7 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
               shape: BoxShape.rectangle,
               borderRadius: new BorderRadius.circular(4.0),
               image: new DecorationImage(
-                  image: new NetworkImage(null!=datas[index].data.cover?datas[index].data.cover.feed:AppConfig.DEF_IMAGE_URL),
+                  image: new NetworkImage(null!=datas[index].data.cover?datas[index].data.cover.feed:ERAppConfig.DEF_IMAGE_URL),
                   fit: BoxFit.fill),
             ),
           ),
@@ -259,7 +284,7 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
                 decoration: new BoxDecoration(
                   shape: BoxShape.circle,
                   image: new DecorationImage(
-                      image: new NetworkImage(null!=datas[index].data.author?datas[index].data.author.icon:AppConfig.DEF_IMAGE_URL),
+                      image: new NetworkImage(null!=datas[index].data.author?datas[index].data.author.icon:ERAppConfig.DEF_IMAGE_URL),
                       fit: BoxFit.fill),
                 ),
               ),
@@ -317,7 +342,7 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
                         shape: BoxShape.rectangle,
                         borderRadius: new BorderRadius.circular(4.0),
                         image: new DecorationImage(
-                            image: new NetworkImage(null!=tag[0].headerImage?tag[0].headerImage:AppConfig.DEF_IMAGE_URL),
+                            image: new NetworkImage(null!=tag[0].headerImage?tag[0].headerImage:ERAppConfig.DEF_IMAGE_URL),
                             fit: BoxFit.cover),
                       ),
                     ),

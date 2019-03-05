@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
-
+/**
+ * Created by toeii
+ * Date: 2019-01-16
+ */
+///加载网页
 class WebLoadPage extends StatefulWidget {
-  var title = "百度";
-  var url = "https://www.baidu.com";
+  var title = "toeii";
+  var url = "https://github.com/toeii";
+  var foregroundWidget;
 
   @override
   _WebLoadPageState createState() => _WebLoadPageState();
@@ -18,6 +23,7 @@ class _WebLoadPageState extends State<WebLoadPage> {
 
   launchUrl() {
     setState(() {
+      widget.foregroundWidget = new Container( alignment: AlignmentDirectional.center, child: CircularProgressIndicator());
       widget.url = controller.text;
       flutterWebviewPlugin.reloadUrl(widget.url);
     });
@@ -30,6 +36,7 @@ class _WebLoadPageState extends State<WebLoadPage> {
     flutterWebviewPlugin.onStateChanged.listen((WebViewStateChanged wvs) {
       if(wvs.type.toString() == 'WebViewState.finishLoad'){
         //web page finishLoad
+        widget.foregroundWidget = null;
       }
     });
   }
