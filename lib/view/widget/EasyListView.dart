@@ -168,9 +168,9 @@ class EasyListViewState extends State<EasyListView> {
 
   final _defaultLoadMore = Container(
     padding: const EdgeInsets.all(4.0),
-    child: const Center(
-        child: const CircularProgressIndicator(),
-    ),
+//    child: const Center(
+//        child: const CircularProgressIndicator(),
+//    ),
   );
 
   final _defaultDivider = const Divider(color: Colors.grey);

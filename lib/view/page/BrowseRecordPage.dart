@@ -137,68 +137,77 @@ class _BrowseRecordPageState extends State<BrowseRecordPage> {
 
 
   Widget getItemBuilder(BuildContext context,int index) {
-    return new Container(
-      alignment: AlignmentDirectional.center,
+    return new GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => new WebLoadPage(title:datas[index].title,url:datas[index].url)),
+        );
+      },
       child: new Container(
-        height: 120,
-        width: window.physicalSize.width,
-        padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
-        child: new Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            new Row(
-              children: <Widget>[
-                new Container(
-                  margin: const EdgeInsets.fromLTRB(5, 0, 5, 0),
-                  width: 88,
-                  height: 68,
-                  decoration: new BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    borderRadius: new BorderRadius.circular(4.0),
-                    image: new DecorationImage(
-                        image: new NetworkImage(null!=datas[index].image?datas[index].image:ERAppConfig.DEF_IMAGE_URL),
-                        fit: BoxFit.cover),
+        alignment: AlignmentDirectional.center,
+        child: new Container(
+          height: 120,
+          width: window.physicalSize.width,
+          padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
+          child: new Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new Row(
+                children: <Widget>[
+                  new Container(
+                    margin: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                    width: 88,
+                    height: 68,
+                    decoration: new BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      borderRadius: new BorderRadius.circular(4.0),
+                      image: new DecorationImage(
+                          image: new NetworkImage(null!=datas[index].image?datas[index].image:ERAppConfig.DEF_IMAGE_URL),
+                          fit: BoxFit.cover),
+                    ),
                   ),
-                ),
 
-                new Container(
-                  height: 88,
-                  width: window.physicalSize.width/3.8,
-                  margin: const EdgeInsets.fromLTRB(5, 0, 0, 0),
-                  child:new Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      new NotEmptyText(null!=datas[index].title?datas[index].title:'未知标题',
-                        style: new TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                          decoration: TextDecoration.none,
+                  new Container(
+                    height: 88,
+                    width: window.physicalSize.width/3.8,
+                    margin: const EdgeInsets.fromLTRB(5, 0, 0, 0),
+                    child:new Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        new NotEmptyText(null!=datas[index].title?datas[index].title:'未知标题',
+                          style: new TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            decoration: TextDecoration.none,
+                          ),
+                          textAlign: TextAlign.left,
                         ),
-                        textAlign: TextAlign.left,
-                      ),
-                      new NotEmptyText(null!=datas[index].content?datas[index].content:'...',
-                        style: new TextStyle(
-                          color: Colors.grey,
-                          fontSize: 14,
-                          decoration: TextDecoration.none,
+                        new NotEmptyText(null!=datas[index].content?datas[index].content:'...',
+                          style: new TextStyle(
+                            color: Colors.grey,
+                            fontSize: 14,
+                            decoration: TextDecoration.none,
+                          ),
+                          maxLines:2,
+                          textAlign: TextAlign.left,
                         ),
-                        maxLines:2,
-                        textAlign: TextAlign.left,
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-            new Divider(),
-          ],
+                ],
+              ),
+              new Divider(),
+            ],
+          ),
         ),
       ),
     );
+
   }
 
 

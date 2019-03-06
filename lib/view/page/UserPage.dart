@@ -102,7 +102,7 @@ class _UserPageState extends State<UserPage> {
             if(items[index] == "项目主页"){
               Navigator.push(
                 context,
-                new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'FlutterExampleApp_ExtensionRead',url:'https://github.com/toeii/FlutterExampleApp_ExtensionRead')),
+                new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'拓意 Extension',url:'https://github.com/toeii/FlutterExampleApp_ExtensionRead')),
               );
             }else if(items[index] == "浏览记录"){
               Navigator.push(
@@ -114,7 +114,7 @@ class _UserPageState extends State<UserPage> {
             }else if(items[index] == "关于作者"){
               Navigator.push(
                 context,
-                new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'toeii',url:'https://github.com/toeii')),
+                new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'关于作者',url:'https://github.com/toeii')),
               );
             }else if(items[index] == "注销账号"){
               new DatabaseHelper().cleanNote();

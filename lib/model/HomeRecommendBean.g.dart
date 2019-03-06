@@ -15,11 +15,7 @@ HomeRecommendBean _$HomeRecommendBeanFromJson(Map<String, dynamic> json) {
       json['count'] as int,
       json['total'] as int,
       json['nextPageUrl'] as String,
-      json['adExist'] as bool,
-      json['date'] as int,
-      json['nextPublishTime'] as int,
-      json['refreshCount'] as int,
-      json['lastStartId'] as int);
+      json['adExist'] as bool);
 }
 
 Map<String, dynamic> _$HomeRecommendBeanToJson(HomeRecommendBean instance) =>
@@ -28,11 +24,7 @@ Map<String, dynamic> _$HomeRecommendBeanToJson(HomeRecommendBean instance) =>
       'count': instance.count,
       'total': instance.total,
       'nextPageUrl': instance.nextPageUrl,
-      'adExist': instance.adExist,
-      'date': instance.date,
-      'nextPublishTime': instance.nextPublishTime,
-      'refreshCount': instance.refreshCount,
-      'lastStartId': instance.lastStartId
+      'adExist': instance.adExist
     };
 
 ItemList _$ItemListFromJson(Map<String, dynamic> json) {
@@ -41,7 +33,6 @@ ItemList _$ItemListFromJson(Map<String, dynamic> json) {
       json['data'] == null
           ? null
           : Data.fromJson(json['data'] as Map<String, dynamic>),
-      json['tag'] as String,
       json['id'] as int,
       json['adIndex'] as int);
 }
@@ -49,13 +40,219 @@ ItemList _$ItemListFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$ItemListToJson(ItemList instance) => <String, dynamic>{
       'type': instance.type,
       'data': instance.data,
-      'tag': instance.tag,
       'id': instance.id,
       'adIndex': instance.adIndex
     };
 
 Data _$DataFromJson(Map<String, dynamic> json) {
   return Data(
+      json['dataType'] as String,
+      json['header'] == null
+          ? null
+          : Header.fromJson(json['header'] as Map<String, dynamic>),
+      json['content'] == null
+          ? null
+          : Content.fromJson(json['content'] as Map<String, dynamic>),
+      json['image'] as String,
+      (json['itemList'] as List)
+          ?.map((e) => e == null
+              ? null
+              : ContentItemList.fromJson(e as Map<String, dynamic>))
+          ?.toList(),
+      json['count'] as int,
+      json['id'] as int,
+      json['title'] as String,
+      json['description'] as String,
+      json['library'] as String,
+      (json['tags'] as List)
+          ?.map((e) =>
+              e == null ? null : Tags.fromJson(e as Map<String, dynamic>))
+          ?.toList(),
+      json['consumption'] == null
+          ? null
+          : Consumption.fromJson(json['consumption'] as Map<String, dynamic>),
+      json['resourceType'] as String,
+      json['slogan'] as String,
+      json['provider'] == null
+          ? null
+          : Provider.fromJson(json['provider'] as Map<String, dynamic>),
+      json['category'] as String,
+      json['author'] == null
+          ? null
+          : Author.fromJson(json['author'] as Map<String, dynamic>),
+      json['cover'] == null
+          ? null
+          : Cover.fromJson(json['cover'] as Map<String, dynamic>),
+      json['playUrl'] as String,
+      json['duration'] as int,
+      json['webUrl'] == null
+          ? null
+          : WebUrl.fromJson(json['webUrl'] as Map<String, dynamic>),
+      json['releaseTime'] as int,
+      (json['playInfo'] as List)
+          ?.map((e) =>
+              e == null ? null : PlayInfo.fromJson(e as Map<String, dynamic>))
+          ?.toList(),
+      json['ad'] as bool,
+      json['type'] as String,
+      json['ifLimitVideo'] as bool,
+      json['searchWeight'] as int,
+      json['idx'] as int,
+      json['date'] as int,
+      json['labelList'] as List,
+      json['descriptionEditor'] as String,
+      json['collected'] as bool,
+      json['played'] as bool,
+      json['subtitles'] as List);
+}
+
+Map<String, dynamic> _$DataToJson(Data instance) => <String, dynamic>{
+      'dataType': instance.dataType,
+      'header': instance.header,
+      'content': instance.content,
+      'image': instance.image,
+      'itemList': instance.itemList,
+      'count': instance.count,
+      'id': instance.id,
+      'title': instance.title,
+      'description': instance.description,
+      'library': instance.library,
+      'tags': instance.tags,
+      'consumption': instance.consumption,
+      'resourceType': instance.resourceType,
+      'slogan': instance.slogan,
+      'provider': instance.provider,
+      'category': instance.category,
+      'author': instance.author,
+      'cover': instance.cover,
+      'playUrl': instance.playUrl,
+      'duration': instance.duration,
+      'webUrl': instance.webUrl,
+      'releaseTime': instance.releaseTime,
+      'playInfo': instance.playInfo,
+      'ad': instance.ad,
+      'type': instance.type,
+      'ifLimitVideo': instance.ifLimitVideo,
+      'searchWeight': instance.searchWeight,
+      'idx': instance.idx,
+      'date': instance.date,
+      'labelList': instance.labelList,
+      'descriptionEditor': instance.descriptionEditor,
+      'collected': instance.collected,
+      'played': instance.played,
+      'subtitles': instance.subtitles
+    };
+
+Header _$HeaderFromJson(Map<String, dynamic> json) {
+  return Header(
+      json['id'] as int,
+      json['title'] as String,
+      json['font'] as String,
+      json['subTitle'] as String,
+      json['subTitleFont'] as String,
+      json['textAlign'] as String,
+      json['actionUrl'] as String,
+      json['rightText'] as String,
+      json['icon'] as String,
+      json['image'] as String,
+      json['description'] as String);
+}
+
+Map<String, dynamic> _$HeaderToJson(Header instance) => <String, dynamic>{
+      'id': instance.id,
+      'title': instance.title,
+      'font': instance.font,
+      'subTitle': instance.subTitle,
+      'subTitleFont': instance.subTitleFont,
+      'textAlign': instance.textAlign,
+      'actionUrl': instance.actionUrl,
+      'rightText': instance.rightText,
+      'icon': instance.icon,
+      'image': instance.image,
+      'description': instance.description
+    };
+
+ContentItemList _$ContentItemListFromJson(Map<String, dynamic> json) {
+  return ContentItemList(
+      json['type'] as String,
+      json['data'] == null
+          ? null
+          : ContentData.fromJson(json['data'] as Map<String, dynamic>),
+      json['id'] as int,
+      json['adIndex'] as int);
+}
+
+Map<String, dynamic> _$ContentItemListToJson(ContentItemList instance) =>
+    <String, dynamic>{
+      'type': instance.type,
+      'data': instance.data,
+      'id': instance.id,
+      'adIndex': instance.adIndex
+    };
+
+ContentData _$ContentDataFromJson(Map<String, dynamic> json) {
+  return ContentData(
+      json['dataType'] as String,
+      json['header'] == null
+          ? null
+          : ContentHeader.fromJson(json['header'] as Map<String, dynamic>),
+      json['content'] == null
+          ? null
+          : Content.fromJson(json['content'] as Map<String, dynamic>));
+}
+
+Map<String, dynamic> _$ContentDataToJson(ContentData instance) =>
+    <String, dynamic>{
+      'dataType': instance.dataType,
+      'header': instance.header,
+      'content': instance.content
+    };
+
+ContentHeader _$ContentHeaderFromJson(Map<String, dynamic> json) {
+  return ContentHeader(
+      json['id'] as int,
+      json['title'] as String,
+      json['textAlign'] as String,
+      json['actionUrl'] as String,
+      json['icon'] as String,
+      json['iconType'] as String,
+      json['description'] as String,
+      json['time'] as int,
+      json['showHateVideo'] as bool);
+}
+
+Map<String, dynamic> _$ContentHeaderToJson(ContentHeader instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'title': instance.title,
+      'textAlign': instance.textAlign,
+      'actionUrl': instance.actionUrl,
+      'icon': instance.icon,
+      'iconType': instance.iconType,
+      'description': instance.description,
+      'time': instance.time,
+      'showHateVideo': instance.showHateVideo
+    };
+
+Content _$ContentFromJson(Map<String, dynamic> json) {
+  return Content(
+      json['type'] as String,
+      json['data'] == null
+          ? null
+          : ContentChildData.fromJson(json['data'] as Map<String, dynamic>),
+      json['id'] as int,
+      json['adIndex'] as int);
+}
+
+Map<String, dynamic> _$ContentToJson(Content instance) => <String, dynamic>{
+      'type': instance.type,
+      'data': instance.data,
+      'id': instance.id,
+      'adIndex': instance.adIndex
+    };
+
+ContentChildData _$ContentChildDataFromJson(Map<String, dynamic> json) {
+  return ContentChildData(
       json['dataType'] as String,
       json['id'] as int,
       json['title'] as String,
@@ -81,7 +278,6 @@ Data _$DataFromJson(Map<String, dynamic> json) {
           ? null
           : Cover.fromJson(json['cover'] as Map<String, dynamic>),
       json['playUrl'] as String,
-      json['thumbPlayUrl'] as String,
       json['duration'] as int,
       json['webUrl'] == null
           ? null
@@ -93,8 +289,6 @@ Data _$DataFromJson(Map<String, dynamic> json) {
           ?.toList(),
       json['ad'] as bool,
       json['type'] as String,
-      json['titlePgc'] as String,
-      json['descriptionPgc'] as String,
       json['ifLimitVideo'] as bool,
       json['searchWeight'] as int,
       json['idx'] as int,
@@ -106,7 +300,8 @@ Data _$DataFromJson(Map<String, dynamic> json) {
       json['subtitles'] as List);
 }
 
-Map<String, dynamic> _$DataToJson(Data instance) => <String, dynamic>{
+Map<String, dynamic> _$ContentChildDataToJson(ContentChildData instance) =>
+    <String, dynamic>{
       'dataType': instance.dataType,
       'id': instance.id,
       'title': instance.title,
@@ -121,15 +316,12 @@ Map<String, dynamic> _$DataToJson(Data instance) => <String, dynamic>{
       'author': instance.author,
       'cover': instance.cover,
       'playUrl': instance.playUrl,
-      'thumbPlayUrl': instance.thumbPlayUrl,
       'duration': instance.duration,
       'webUrl': instance.webUrl,
       'releaseTime': instance.releaseTime,
       'playInfo': instance.playInfo,
       'ad': instance.ad,
       'type': instance.type,
-      'titlePgc': instance.titlePgc,
-      'descriptionPgc': instance.descriptionPgc,
       'ifLimitVideo': instance.ifLimitVideo,
       'searchWeight': instance.searchWeight,
       'idx': instance.idx,

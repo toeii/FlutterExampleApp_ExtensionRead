@@ -8,7 +8,6 @@ import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 class WebLoadPage extends StatefulWidget {
   var title = "toeii";
   var url = "https://github.com/toeii";
-  var foregroundWidget;
 
   @override
   _WebLoadPageState createState() => _WebLoadPageState();
@@ -20,10 +19,13 @@ class WebLoadPage extends StatefulWidget {
 class _WebLoadPageState extends State<WebLoadPage> {
   TextEditingController controller = TextEditingController();
   FlutterWebviewPlugin flutterWebviewPlugin = FlutterWebviewPlugin();
+  var foregroundWidget = new Container(
+      alignment: AlignmentDirectional.center,
+      child:CircularProgressIndicator(),
+  );
 
   launchUrl() {
     setState(() {
-      widget.foregroundWidget = new Container( alignment: AlignmentDirectional.center, child: CircularProgressIndicator());
       widget.url = controller.text;
       flutterWebviewPlugin.reloadUrl(widget.url);
     });
@@ -32,11 +34,12 @@ class _WebLoadPageState extends State<WebLoadPage> {
   @override
   void initState() {
     super.initState();
-
     flutterWebviewPlugin.onStateChanged.listen((WebViewStateChanged wvs) {
       if(wvs.type.toString() == 'WebViewState.finishLoad'){
         //web page finishLoad
-        widget.foregroundWidget = null;
+        setState(() {
+          foregroundWidget = null;
+        });
       }
     });
   }

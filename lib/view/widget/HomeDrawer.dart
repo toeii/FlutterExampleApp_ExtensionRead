@@ -53,7 +53,7 @@ class HomeDrawer extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'FlutterExampleApp_ExtensionRead',url:'https://github.com/toeii/FlutterExampleApp_ExtensionRead')),
+                            new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'拓意 Extension',url:'https://github.com/toeii/FlutterExampleApp_ExtensionRead')),
                           );
                         }
                     ),
@@ -73,7 +73,7 @@ class HomeDrawer extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'toeii',url:'https://github.com/toeii')),
+                            new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'关于作者',url:'https://github.com/toeii')),
                           );
                         }),
                     new ListTile(leading: Icon(Icons.swap_vertical_circle),title: Text('清除缓存'),

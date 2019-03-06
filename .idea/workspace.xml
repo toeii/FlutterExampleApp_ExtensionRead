@@ -10,102 +10,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcc70c83-c28a-4196-b1a6-5331ee818a54" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/service/database/DatabaseHelper.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/FlutterExampleApp_ExtensionRead.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FlutterExampleApp_ExtensionRead.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/app.dill.track.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app.dill.track.dill.incremental.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/app.dill.track.dill.incremental.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/toeii/read/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/toeii/read/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/blame/res/debug/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/blame/res/debug/multi-v2/values.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/isolate_snapshot_data" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/isolate_snapshot_data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/vm_snapshot_data" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/vm_snapshot_data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/snapshot_blob.bin.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/snapshot_blob.bin.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/snapshot_blob.bin.d.fingerprint" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/snapshot_blob.bin.d.fingerprint" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/flutter-x86.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/flutter-x86.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/zip-cache/7p3wEy3t6spK58KsK1KJk8RbnFI=" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/zip-cache/7p3wEy3t6spK58KsK1KJk8RbnFI=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJniLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJniLibs/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJniLibs/zip-cache/7p3wEy3t6spK58KsK1KJk8RbnFI=" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJniLibs/zip-cache/7p3wEy3t6spK58KsK1KJk8RbnFI=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/zip-cache/4OqlWJvE673AcL1+CiQi4NKnqHw=" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/zip-cache/4OqlWJvE673AcL1+CiQi4NKnqHw=" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/zip-cache/cIOPKZjXoCnXtCsG76TRkrkLSro=" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/zip-cache/cIOPKZjXoCnXtCsG76TRkrkLSro=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/toeii/read/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/toeii/read/R$drawable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/toeii/read/R$mipmap.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/toeii/read/R$mipmap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/toeii/read/R$style.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/toeii/read/R$style.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/toeii/read/R.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/toeii/read/R.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins/GeneratedPluginRegistrant.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins/GeneratedPluginRegistrant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/isolate_snapshot_data" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/isolate_snapshot_data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/vm_snapshot_data" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/vm_snapshot_data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/3.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/__content__.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/__content__.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/dexMerger/debug/0/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexMerger/debug/0/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/externalLibsDexMerger/debug/0/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/externalLibsDexMerger/debug/0/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/mergeJavaRes/debug/0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/mergeJavaRes/debug/0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/mergeJniLibs/debug/0/lib/x86/libflutter.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/mergeJniLibs/debug/0/lib/x86/libflutter.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/mergeJniLibs/debug/0/lib/x86_64/libflutter.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/mergeJniLibs/debug/0/lib/x86_64/libflutter.so" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/app.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/app.apk.sha1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/BrowseRecordBean.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/BrowseRecordBean.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/HomeDailyBean.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/HomeDailyBean.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/HomeDailyContentBean.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/HomeDailyContentBean.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/model/HomeRecommendBean.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/HomeRecommendBean.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/service/AppConfig.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/service/ERAppConfig.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/service/database/AppDataBase.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/service/net/AppHttpClient.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/service/net/ERAppHttpClient.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/HomeRecommendBean.g.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/service/ERAppConfig.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/service/ERAppConfig.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/page/BrowseRecordPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/BrowseRecordPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/page/CommunityPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/CommunityPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/page/HomeDailyPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/HomeDailyPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/page/HomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/HomePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/page/HomeRecommendPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/HomeRecommendPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/page/MainPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/MainPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/page/PaperDetailPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/PaperDetailPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/page/PersonalPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/PersonalPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/page/UserPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/UserPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/page/WebLoadPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/WebLoadPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/widget/BarBottomDivider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/widget/BarBottomDivider.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/widget/EasyListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/widget/EasyListView.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/widget/ExpandKToolbar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/widget/ExpandKToolbar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/widget/NotEmptyText.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/widget/NotEmptyText.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/widget/HomeDrawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/widget/HomeDrawer.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -119,8 +57,8 @@
       <file leaf-file-name="HomeDrawer.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/view/widget/HomeDrawer.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1065">
-              <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
+            <state relative-caret-position="765">
+              <caret line="55" column="107" selection-start-line="55" selection-start-column="107" selection-end-line="55" selection-end-column="107" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -128,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BrowseRecordPage.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/view/page/BrowseRecordPage.dart">
+      <file leaf-file-name="PersonalPage.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/view/page/PersonalPage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+            <state relative-caret-position="238">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -140,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaperDetailPage.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PaperDetailPage.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/view/page/PaperDetailPage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="22" column="140" selection-start-line="22" selection-start-column="140" selection-end-line="22" selection-end-column="140" />
+            <state relative-caret-position="360">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -155,8 +93,68 @@
       <file leaf-file-name="UserPage.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/view/page/UserPage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+            <state relative-caret-position="278">
+              <caret line="116" column="87" selection-start-line="116" selection-start-column="83" selection-end-line="116" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainPage.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/view/page/MainPage.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="32" column="32" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommunityPage.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/view/page/CommunityPage.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-329">
+              <caret line="223" column="10" selection-start-line="223" selection-start-column="10" selection-end-line="223" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeRecommendPage.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/view/page/HomeRecommendPage.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="317" selection-start-line="317" selection-end-line="317" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomePage.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/view/page/HomePage.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeDailyPage.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/view/page/HomeDailyPage.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -172,23 +170,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.icon</find>
-      <find>controller</find>
-      <find>_controller</find>
-      <find>PersonalPage</find>
-      <find>//TODO</find>
-      <find>Data</find>
-      <find>showHateVideo</find>
-      <find>ListView.builder</find>
-      <find>tagName</find>
-      <find>double</find>
-      <find>int</find>
-      <find>avatar</find>
-      <find>foregroundWidget</find>
-      <find>feed</find>
-      <find>page</find>
       <find>_requestMoreData</find>
-      <find>_getContentItemView</find>
       <find>itemBuilder</find>
       <find>itemCount</find>
       <find>footerBuilder</find>
@@ -202,6 +184,22 @@
       <find>AppConfig</find>
       <find>LocalStorage</find>
       <find>THEME_COLOR</find>
+      <find>ItemList</find>
+      <find>_getBannerViewItem</find>
+      <find>getItemBuilder</find>
+      <find>off</find>
+      <find>_getLvItemView</find>
+      <find>Content</find>
+      <find>_getLvCardItemView</find>
+      <find>content</find>
+      <find>header</find>
+      <find>height: 0</find>
+      <find>Theme</find>
+      <find>primarySwatch</find>
+      <find>_getContentItemView</find>
+      <find>CircularProgressIndicator</find>
+      <find>foregroundWidget</find>
+      <find>拓意</find>
     </findStrings>
     <replaceStrings>
       <replace>Colors.grey</replace>
@@ -223,9 +221,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/model/HomeDaily.dart" />
-        <option value="$PROJECT_DIR$/lib/model/HomeRecommend.dart" />
-        <option value="$PROJECT_DIR$/lib/model/entity/HomeRecommendEntity.dart" />
         <option value="$PROJECT_DIR$/lib/model/AppConfig.dart" />
         <option value="$PROJECT_DIR$/lib/model/entity/HomeDailyEntity.dart" />
         <option value="$PROJECT_DIR$/lib/model/Home.dart" />
@@ -243,7 +238,6 @@
         <option value="$PROJECT_DIR$/android/gradle.properties" />
         <option value="$PROJECT_DIR$/android/app/build.gradle" />
         <option value="$PROJECT_DIR$/android/build.gradle" />
-        <option value="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/lib/service/redux/ERState.dart" />
         <option value="$PROJECT_DIR$/lib/service/net/ERAppHttpClient.dart" />
         <option value="$PROJECT_DIR$/lib/service/database/DatabaseHelper.dart" />
@@ -252,32 +246,37 @@
         <option value="$PROJECT_DIR$/lib/model/CommunityItemBean.dart" />
         <option value="$PROJECT_DIR$/lib/model/HomeDailyBean.dart" />
         <option value="$PROJECT_DIR$/lib/model/HomeDailyContentBean.dart" />
-        <option value="$PROJECT_DIR$/lib/model/HomeRecommendBean.dart" />
-        <option value="$PROJECT_DIR$/lib/view/page/WebLoadPage.dart" />
         <option value="$PROJECT_DIR$/lib/view/page/HomePage.dart" />
         <option value="$PROJECT_DIR$/lib/service/redux/ThemeRedux.dart" />
         <option value="$PROJECT_DIR$/lib/view/widget/BarBottomDivider.dart" />
-        <option value="$PROJECT_DIR$/lib/view/widget/EasyListView.dart" />
         <option value="$PROJECT_DIR$/lib/view/widget/ExpandKToolbar.dart" />
         <option value="$PROJECT_DIR$/lib/view/widget/NotEmptyText.dart" />
-        <option value="$PROJECT_DIR$/lib/view/page/BrowseRecordPage.dart" />
         <option value="$PROJECT_DIR$/lib/view/page/HomeDailyPage.dart" />
-        <option value="$PROJECT_DIR$/lib/view/page/HomeRecommendPage.dart" />
         <option value="$PROJECT_DIR$/lib/view/widget/FullButton.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/service/storage/LocalStorage.dart" />
-        <option value="$PROJECT_DIR$/lib/service/ERAppConfig.dart" />
-        <option value="$PROJECT_DIR$/lib/view/page/PersonalPage.dart" />
         <option value="$PROJECT_DIR$/lib/service/redux/ERAppState.dart" />
-        <option value="$PROJECT_DIR$/lib/view/page/CommunityPage.dart" />
-        <option value="$PROJECT_DIR$/lib/view/widget/HomeDrawer.dart" />
         <option value="$PROJECT_DIR$/lib/view/page/MainPage.dart" />
-        <option value="$PROJECT_DIR$/lib/view/page/UserPage.dart" />
+        <option value="$PROJECT_DIR$/lib/view/page/BrowseRecordPage.dart" />
+        <option value="$PROJECT_DIR$/lib/model/PersonalBean.g.dart" />
+        <option value="$PROJECT_DIR$/lib/service/ERAppConfig.dart" />
+        <option value="$PROJECT_DIR$/lib/model/PersonalInfoBean.dart" />
+        <option value="$PROJECT_DIR$/lib/model/HomeRecommendBean.dart" />
+        <option value="$PROJECT_DIR$/lib/model/PersonalBean.dart" />
+        <option value="$PROJECT_DIR$/lib/view/widget/EasyListView.dart" />
+        <option value="$PROJECT_DIR$/lib/view/page/PersonalPage.dart" />
         <option value="$PROJECT_DIR$/lib/view/page/PaperDetailPage.dart" />
+        <option value="$PROJECT_DIR$/lib/view/page/WebLoadPage.dart" />
+        <option value="$PROJECT_DIR$/lib/view/page/CommunityPage.dart" />
+        <option value="$PROJECT_DIR$/lib/view/page/UserPage.dart" />
+        <option value="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/lib/view/widget/HomeDrawer.dart" />
+        <option value="$PROJECT_DIR$/lib/view/page/HomeRecommendPage.dart" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-1" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="731" />
@@ -366,6 +365,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -382,46 +384,6 @@
               <item name="FlutterExampleApp_ExtensionRead" type="b2602c69:ProjectViewProjectNode" />
               <item name="FlutterExampleApp_ExtensionRead" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FlutterExampleApp_ExtensionRead" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FlutterExampleApp_ExtensionRead" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FlutterExampleApp_ExtensionRead" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FlutterExampleApp_ExtensionRead" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FlutterExampleApp_ExtensionRead" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FlutterExampleApp_ExtensionRead" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FlutterExampleApp_ExtensionRead" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FlutterExampleApp_ExtensionRead" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FlutterExampleApp_ExtensionRead" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FlutterExampleApp_ExtensionRead" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FlutterExampleApp_ExtensionRead" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FlutterExampleApp_ExtensionRead" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -431,20 +393,10 @@
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="FlutterExampleApp_ExtensionRead" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FlutterExampleApp_ExtensionRead" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="widget" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -564,31 +516,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="731" extended-state="0" />
+    <frame x="-1" y="23" width="1280" height="731" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
+      <window_info id="Build Variants" order="2" sideWeight="0.50141644" side_tool="true" weight="0.23828755" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5048465" side_tool="true" weight="0.67536706" />
+      <window_info anchor="bottom" id="Dart Analysis" order="7" sideWeight="0.49596122" weight="0.2985318" />
+      <window_info anchor="right" id="Flutter Outline" order="3" weight="0.32956383" />
+      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.49919224" weight="0.26427406" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49596122" weight="0.49429038" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49919224" weight="0.5203915" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
-      <window_info id="Build Variants" order="2" sideWeight="0.50141644" side_tool="true" weight="0.23828755" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5048465" side_tool="true" weight="0.67536706" />
       <window_info anchor="bottom" id="Flutter Performance" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Dart Analysis" order="7" sideWeight="0.49596122" weight="0.2985318" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4951535" weight="0.5872757" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4951535" weight="0.15334421" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.5303777" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49757674" weight="0.29363784" />
-      <window_info anchor="right" id="Flutter Outline" order="3" weight="0.32956383" />
-      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.49919224" weight="0.07014682" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49757674" weight="0.15334421" />
       <window_info id="Captures" order="2" weight="0.25" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.24878837" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.2673667" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.19249593" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49596122" weight="0.47960848" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Flutter Inspector" order="3" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -598,7 +551,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.4983845" weight="0.2822186" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.19249593" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -632,7 +584,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="107" />
+      <option name="time" value="115" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="FlutterRunConfigurationType">
@@ -661,42 +613,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/android/gradlew">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/android/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -781,13 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/model/CommunityItemBean.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -806,27 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/model/HomeRecommendBean.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/page/WebLoadPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/page/HomePage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="12" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -854,20 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/model/BrowseRecordBean.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/widget/EasyListView.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="8" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -899,20 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/page/HomeDailyPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="180" column="312" selection-start-line="180" selection-start-column="312" selection-end-line="180" selection-end-column="312" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/page/HomeRecommendPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Flutter/bin/cache/pkg/sky_engine/lib/ui/painting.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1545">
@@ -941,47 +801,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/page/PersonalPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4245">
-          <caret line="290" column="51" selection-start-line="290" selection-start-column="51" selection-end-line="290" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/service/ERAppConfig.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_redux-0.5.3/lib/flutter_redux.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="326" column="2" selection-start-line="326" selection-start-column="2" selection-end-line="326" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/page/MainPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="92" column="15" lean-forward="true" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/service/redux/ERAppState.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#48#87#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -992,44 +815,185 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/page/CommunityPage.dart">
+    <entry file="file://$PROJECT_DIR$/lib/model/BrowseRecordBean.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="208" column="8" lean-forward="true" selection-start-line="199" selection-start-column="2" selection-end-line="208" selection-end-column="8" />
+        <state relative-caret-position="-429">
+          <caret selection-end-line="4" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/page/UserPage.dart">
+    <entry file="file://$PROJECT_DIR$/lib/model/PersonalBean.g.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+        <state relative-caret-position="151">
+          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/widget/HomeDrawer.dart">
+    <entry file="file://$PROJECT_DIR$/lib/service/ERAppConfig.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
+        <state relative-caret-position="180">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/model/PersonalInfoBean.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Flutter/packages/flutter/lib/src/widgets/sliver.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="399" column="14" selection-start-line="399" selection-start-column="14" selection-end-line="399" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/model/HomeRecommendBean.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-294">
+          <caret line="68" column="17" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Flutter/packages/flutter/lib/src/material/theme_data.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="89" column="6" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/service/redux/ERAppState.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="11" />
+          <folding>
+            <element signature="e#48#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/model/PersonalBean.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view/widget/EasyListView.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="172" column="8" lean-forward="true" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/view/page/BrowseRecordPage.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+        <state relative-caret-position="255">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="24" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Library/Flutter/packages/flutter/lib/src/material/progress_indicator.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="400" column="8" selection-start-line="400" selection-start-column="8" selection-end-line="400" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view/page/WebLoadPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view/page/PersonalPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view/page/HomeDailyPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view/page/CommunityPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-329">
+          <caret line="223" column="10" selection-start-line="223" selection-start-column="10" selection-end-line="223" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view/page/UserPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="116" column="87" selection-start-line="116" selection-start-column="83" selection-end-line="116" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view/page/HomePage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/view/page/PaperDetailPage.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="22" column="140" selection-start-line="22" selection-start-column="140" selection-end-line="22" selection-end-column="140" />
+        <state relative-caret-position="360">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view/page/MainPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view/widget/HomeDrawer.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="55" column="107" selection-start-line="55" selection-start-column="107" selection-end-line="55" selection-end-column="107" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view/page/HomeRecommendPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="317" selection-start-line="317" selection-end-line="317" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>

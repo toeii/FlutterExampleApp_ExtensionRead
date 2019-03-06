@@ -71,7 +71,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha01] /Us
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0-alpha04] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/core-1.1.0-alpha04.aar/91d94bbb622f7308ef8621185e4042ba/AndroidManifest.xml:22:18-86
 	android:label
-		ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:17:9-34
+		ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:17:9-37
 	android:icon
 		ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:18:9-43
 	android:usesCleartextTraffic

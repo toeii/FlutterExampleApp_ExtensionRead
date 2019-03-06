@@ -23,7 +23,8 @@ class _PaperDetailPageState extends State<PaperDetailPage>{
   var _playUrl = "http://ali.cdn.kaiyanapp.com/2782c89527853e169c522e11d1bc474a.mp4?auth_key=1551796559-0-0-1129a49e14f7d3e2e6794c31fe340c63";
   var itemCount = 20;
   var hasNextPage = true;
-//  var foregroundWidget = Container( alignment: AlignmentDirectional.center, child: CircularProgressIndicator());
+  bool isLoadData = true;
+  var foregroundWidget = Container( alignment: AlignmentDirectional.center, child: CircularProgressIndicator());
 
   @override
   void initState() {

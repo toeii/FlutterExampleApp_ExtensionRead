@@ -1,7 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-
 part 'HomeRecommendBean.g.dart';
-
 /**
  * Created by toeii
  * Date: 2019-01-16
@@ -25,25 +23,14 @@ class HomeRecommendBean extends Object {
   @JsonKey(name: 'adExist')
   bool adExist;
 
-  @JsonKey(name: 'date')
-  int date;
+  HomeRecommendBean(this.itemList,this.count,this.total,this.nextPageUrl,this.adExist,);
 
-  @JsonKey(name: 'nextPublishTime')
-  int nextPublishTime;
-
-  @JsonKey(name: 'refreshCount')
-  int refreshCount;
-
-  @JsonKey(name: 'lastStartId')
-  int lastStartId;
-
-  HomeRecommendBean(this.itemList,this.count,this.total,this.nextPageUrl,this.adExist,this.date,this.nextPublishTime,this.refreshCount,this.lastStartId,);
-
-  factory HomeRecommendBean.fromJson(Map<String, dynamic> srcJson) =>  _$HomeRecommendBeanFromJson(srcJson);
+  factory HomeRecommendBean.fromJson(Map<String, dynamic> srcJson) => _$HomeRecommendBeanFromJson(srcJson);
 
   Map<String, dynamic> toJson() => _$HomeRecommendBeanToJson(this);
 
 }
+
 
 @JsonSerializable()
 class ItemList extends Object {
@@ -54,16 +41,13 @@ class ItemList extends Object {
   @JsonKey(name: 'data')
   Data data;
 
-  @JsonKey(name: 'tag')
-  String tag;
-
   @JsonKey(name: 'id')
   int id;
 
   @JsonKey(name: 'adIndex')
   int adIndex;
 
-  ItemList(this.type,this.data,this.tag,this.id,this.adIndex,);
+  ItemList(this.type,this.data,this.id,this.adIndex,);
 
   factory ItemList.fromJson(Map<String, dynamic> srcJson) => _$ItemListFromJson(srcJson);
 
@@ -74,6 +58,273 @@ class ItemList extends Object {
 
 @JsonSerializable()
 class Data extends Object {
+
+  @JsonKey(name: 'dataType')
+  String dataType;
+
+  @JsonKey(name: 'header')
+  Header header;
+
+  @JsonKey(name: 'content')
+  Content content;
+
+  @JsonKey(name: 'image')
+  String image;
+
+  @JsonKey(name: 'itemList')
+  List<ContentItemList> itemList;
+
+  @JsonKey(name: 'count')
+  int count;
+
+  @JsonKey(name: 'id')
+  int id;
+
+  @JsonKey(name: 'title')
+  String title;
+
+  @JsonKey(name: 'description')
+  String description;
+
+  @JsonKey(name: 'library')
+  String library;
+
+  @JsonKey(name: 'tags')
+  List<Tags> tags;
+
+  @JsonKey(name: 'consumption')
+  Consumption consumption;
+
+  @JsonKey(name: 'resourceType')
+  String resourceType;
+
+  @JsonKey(name: 'slogan')
+  String slogan;
+
+  @JsonKey(name: 'provider')
+  Provider provider;
+
+  @JsonKey(name: 'category')
+  String category;
+
+  @JsonKey(name: 'author')
+  Author author;
+
+  @JsonKey(name: 'cover')
+  Cover cover;
+
+  @JsonKey(name: 'playUrl')
+  String playUrl;
+
+  @JsonKey(name: 'duration')
+  int duration;
+
+  @JsonKey(name: 'webUrl')
+  WebUrl webUrl;
+
+  @JsonKey(name: 'releaseTime')
+  int releaseTime;
+
+  @JsonKey(name: 'playInfo')
+  List<PlayInfo> playInfo;
+
+  @JsonKey(name: 'ad')
+  bool ad;
+
+  @JsonKey(name: 'type')
+  String type;
+
+  @JsonKey(name: 'ifLimitVideo')
+  bool ifLimitVideo;
+
+  @JsonKey(name: 'searchWeight')
+  int searchWeight;
+
+  @JsonKey(name: 'idx')
+  int idx;
+
+  @JsonKey(name: 'date')
+  int date;
+
+  @JsonKey(name: 'labelList')
+  List<dynamic> labelList;
+
+  @JsonKey(name: 'descriptionEditor')
+  String descriptionEditor;
+
+  @JsonKey(name: 'collected')
+  bool collected;
+
+  @JsonKey(name: 'played')
+  bool played;
+
+  @JsonKey(name: 'subtitles')
+  List<dynamic> subtitles;
+
+  Data(this.dataType,this.header,this.content,this.image,this.itemList,this.count,this.id,this.title,this.description,this.library,this.tags,this.consumption,this.resourceType,this.slogan,this.provider,this.category,this.author,this.cover,this.playUrl,this.duration,this.webUrl,this.releaseTime,this.playInfo,this.ad,this.type,this.ifLimitVideo,this.searchWeight,this.idx,this.date,this.labelList,this.descriptionEditor,this.collected,this.played,this.subtitles,);
+
+  factory Data.fromJson(Map<String, dynamic> srcJson) => _$DataFromJson(srcJson);
+
+  Map<String, dynamic> toJson() => _$DataToJson(this);
+
+}
+
+
+@JsonSerializable()
+class Header extends Object {
+
+  @JsonKey(name: 'id')
+  int id;
+
+  @JsonKey(name: 'title')
+  String title;
+
+  @JsonKey(name: 'font')
+  String font;
+
+  @JsonKey(name: 'subTitle')
+  String subTitle;
+
+  @JsonKey(name: 'subTitleFont')
+  String subTitleFont;
+
+  @JsonKey(name: 'textAlign')
+  String textAlign;
+
+  @JsonKey(name: 'actionUrl')
+  String actionUrl;
+
+  @JsonKey(name: 'rightText')
+  String rightText;
+
+  @JsonKey(name: 'icon')
+  String icon;
+
+  @JsonKey(name: 'image')
+  String image;
+
+  @JsonKey(name: 'description')
+  String description;
+
+  Header(this.id,this.title,this.font,this.subTitle,this.subTitleFont,this.textAlign,this.actionUrl,this.rightText,this.icon,this.image,this.description);
+
+  factory Header.fromJson(Map<String, dynamic> srcJson) => _$HeaderFromJson(srcJson);
+
+  Map<String, dynamic> toJson() => _$HeaderToJson(this);
+
+}
+
+
+@JsonSerializable()
+class ContentItemList extends Object {
+
+  @JsonKey(name: 'type')
+  String type;
+
+  @JsonKey(name: 'data')
+  ContentData data;
+
+  @JsonKey(name: 'id')
+  int id;
+
+  @JsonKey(name: 'adIndex')
+  int adIndex;
+
+  ContentItemList(this.type,this.data,this.id,this.adIndex,);
+
+  factory ContentItemList.fromJson(Map<String, dynamic> srcJson) => _$ContentItemListFromJson(srcJson);
+
+  Map<String, dynamic> toJson() => _$ContentItemListToJson(this);
+
+}
+
+
+@JsonSerializable()
+class ContentData extends Object {
+
+  @JsonKey(name: 'dataType')
+  String dataType;
+
+  @JsonKey(name: 'header')
+  ContentHeader header;
+
+  @JsonKey(name: 'content')
+  Content content;
+
+  ContentData(this.dataType,this.header,this.content,);
+
+  factory ContentData.fromJson(Map<String, dynamic> srcJson) => _$ContentDataFromJson(srcJson);
+
+  Map<String, dynamic> toJson() => _$ContentDataToJson(this);
+
+}
+
+
+@JsonSerializable()
+class ContentHeader extends Object {
+
+  @JsonKey(name: 'id')
+  int id;
+
+  @JsonKey(name: 'title')
+  String title;
+
+  @JsonKey(name: 'textAlign')
+  String textAlign;
+
+  @JsonKey(name: 'actionUrl')
+  String actionUrl;
+
+  @JsonKey(name: 'icon')
+  String icon;
+
+  @JsonKey(name: 'iconType')
+  String iconType;
+
+  @JsonKey(name: 'description')
+  String description;
+
+  @JsonKey(name: 'time')
+  int time;
+
+  @JsonKey(name: 'showHateVideo')
+  bool showHateVideo;
+
+  ContentHeader(this.id,this.title,this.textAlign,this.actionUrl,this.icon,this.iconType,this.description,this.time,this.showHateVideo,);
+
+  factory ContentHeader.fromJson(Map<String, dynamic> srcJson) => _$ContentHeaderFromJson(srcJson);
+
+  Map<String, dynamic> toJson() => _$ContentHeaderToJson(this);
+
+}
+
+
+@JsonSerializable()
+class Content extends Object {
+
+  @JsonKey(name: 'type')
+  String type;
+
+  @JsonKey(name: 'data')
+  ContentChildData data;
+
+  @JsonKey(name: 'id')
+  int id;
+
+  @JsonKey(name: 'adIndex')
+  int adIndex;
+
+  Content(this.type,this.data,this.id,this.adIndex,);
+
+  factory Content.fromJson(Map<String, dynamic> srcJson) => _$ContentFromJson(srcJson);
+
+  Map<String, dynamic> toJson() => _$ContentToJson(this);
+
+}
+
+
+@JsonSerializable()
+class ContentChildData extends Object {
 
   @JsonKey(name: 'dataType')
   String dataType;
@@ -117,9 +368,6 @@ class Data extends Object {
   @JsonKey(name: 'playUrl')
   String playUrl;
 
-  @JsonKey(name: 'thumbPlayUrl')
-  String thumbPlayUrl;
-
   @JsonKey(name: 'duration')
   int duration;
 
@@ -137,12 +385,6 @@ class Data extends Object {
 
   @JsonKey(name: 'type')
   String type;
-
-  @JsonKey(name: 'titlePgc')
-  String titlePgc;
-
-  @JsonKey(name: 'descriptionPgc')
-  String descriptionPgc;
 
   @JsonKey(name: 'ifLimitVideo')
   bool ifLimitVideo;
@@ -171,11 +413,11 @@ class Data extends Object {
   @JsonKey(name: 'subtitles')
   List<dynamic> subtitles;
 
-  Data(this.dataType,this.id,this.title,this.description,this.library,this.tags,this.consumption,this.resourceType,this.slogan,this.provider,this.category,this.author,this.cover,this.playUrl,this.thumbPlayUrl,this.duration,this.webUrl,this.releaseTime,this.playInfo,this.ad,this.type,this.titlePgc,this.descriptionPgc,this.ifLimitVideo,this.searchWeight,this.idx,this.date,this.labelList,this.descriptionEditor,this.collected,this.played,this.subtitles,);
+  ContentChildData(this.dataType,this.id,this.title,this.description,this.library,this.tags,this.consumption,this.resourceType,this.slogan,this.provider,this.category,this.author,this.cover,this.playUrl,this.duration,this.webUrl,this.releaseTime,this.playInfo,this.ad,this.type,this.ifLimitVideo,this.searchWeight,this.idx,this.date,this.labelList,this.descriptionEditor,this.collected,this.played,this.subtitles,);
 
-  factory Data.fromJson(Map<String, dynamic> srcJson) => _$DataFromJson(srcJson);
+  factory ContentChildData.fromJson(Map<String, dynamic> srcJson) => _$ContentChildDataFromJson(srcJson);
 
-  Map<String, dynamic> toJson() => _$DataToJson(this);
+  Map<String, dynamic> toJson() => _$ContentChildDataToJson(this);
 
 }
 
@@ -443,4 +685,4 @@ class UrlList extends Object {
 
 }
 
-  
+

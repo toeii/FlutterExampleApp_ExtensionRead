@@ -39,7 +39,7 @@ class _CommunityPageState extends State<CommunityPage> with AutomaticKeepAliveCl
   List<ItemList> contentDatas = [];
 
   int tagId = 0;
-  String tagName = '热门主题推荐';
+  String tagName = '';
 
   @override
   void initState() {
@@ -51,7 +51,7 @@ class _CommunityPageState extends State<CommunityPage> with AutomaticKeepAliveCl
   void initData(){
     headDatas.clear();
 
-    String requestUrl = ERAppConfig.BASE_URL_V6 + "community/tab/rec?udid=10000&vc=451&vn=5.0&size=720X1424&deviceModel=PBAT00&first_channel=eyepetizer_market&last_channel=eyepetizer_market&system_version_code=27".toString();
+    String requestUrl = ERAppConfig.BASE_URL_V6 + "community/tab/rec?udid=55b862f0d6714f609bd6e45947f8789f0ff90f48&vc=461&deviceModel=PBAT00".toString();
     AppHttpClient.get(requestUrl, (data) {
       if(null != data) {
         CommunityBean communityBean = CommunityBean.fromJson(data);
@@ -219,7 +219,7 @@ class _CommunityPageState extends State<CommunityPage> with AutomaticKeepAliveCl
           page = 1;
           tagId = headDatas[index].data.tagId;
           tagName = headDatas[index].data.tagName;
-          isLoadData = false;
+          isLoadData = true;
           initListData(tagId,tagName);
         },
         child: new Container(
