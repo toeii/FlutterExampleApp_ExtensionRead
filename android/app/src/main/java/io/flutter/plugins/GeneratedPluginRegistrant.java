@@ -3,6 +3,7 @@ package io.flutter.plugins;
 import io.flutter.plugin.common.PluginRegistry;
 import com.flutter_webview_plugin.FlutterWebviewPlugin;
 import io.github.ponnamkarthik.toast.fluttertoast.FluttertoastPlugin;
+import flutter.plugins.screen.screen.ScreenPlugin;
 import io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin;
 import com.tekartik.sqflite.SqflitePlugin;
 import io.flutter.plugins.videoplayer.VideoPlayerPlugin;
@@ -17,6 +18,7 @@ public final class GeneratedPluginRegistrant {
     }
     FlutterWebviewPlugin.registerWith(registry.registrarFor("com.flutter_webview_plugin.FlutterWebviewPlugin"));
     FluttertoastPlugin.registerWith(registry.registrarFor("io.github.ponnamkarthik.toast.fluttertoast.FluttertoastPlugin"));
+    ScreenPlugin.registerWith(registry.registrarFor("flutter.plugins.screen.screen.ScreenPlugin"));
     SharedPreferencesPlugin.registerWith(registry.registrarFor("io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin"));
     SqflitePlugin.registerWith(registry.registrarFor("com.tekartik.sqflite.SqflitePlugin"));
     VideoPlayerPlugin.registerWith(registry.registrarFor("io.flutter.plugins.videoplayer.VideoPlayerPlugin"));

@@ -419,6 +419,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "3.0.0"
+  screen:
+    dependency: "direct main"
+    description:
+      name: screen
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.0.4"
   shared_preferences:
     dependency: "direct main"
     description:
@@ -598,7 +605,7 @@ packages:
       name: video_player
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.8.0"
+    version: "0.10.0+2"
   vm_service_client:
     dependency: transitive
     description:

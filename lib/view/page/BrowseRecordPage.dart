@@ -171,7 +171,7 @@ class _BrowseRecordPageState extends State<BrowseRecordPage> {
                   ),
 
                   new Container(
-                    height: 88,
+                    height: 90,
                     width: window.physicalSize.width/3.8,
                     margin: const EdgeInsets.fromLTRB(5, 0, 0, 0),
                     child:new Column(
@@ -185,7 +185,9 @@ class _BrowseRecordPageState extends State<BrowseRecordPage> {
                             fontSize: 16,
                             decoration: TextDecoration.none,
                           ),
+                          maxLines:2,
                           textAlign: TextAlign.left,
+                          overflow: TextOverflow.ellipsis,
                         ),
                         new NotEmptyText(null!=datas[index].content?datas[index].content:'...',
                           style: new TextStyle(
@@ -195,6 +197,7 @@ class _BrowseRecordPageState extends State<BrowseRecordPage> {
                           ),
                           maxLines:2,
                           textAlign: TextAlign.left,
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ],
                     ),

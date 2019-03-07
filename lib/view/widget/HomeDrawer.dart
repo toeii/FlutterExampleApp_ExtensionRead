@@ -53,7 +53,7 @@ class HomeDrawer extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'拓意 Extension',url:'https://github.com/toeii/FlutterExampleApp_ExtensionRead')),
+                            new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'拓意阅读',url:'https://github.com/toeii/FlutterExampleApp_ExtensionRead')),
                           );
                         }
                     ),

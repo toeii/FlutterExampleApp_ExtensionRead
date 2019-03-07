@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       store: store,
       child: new StoreBuilder<ERAppState>(builder: (context, store) {
         return new MaterialApp(
-            title: '拓意 Extension',
+            title: '拓意阅读',
             debugShowCheckedModeBanner: true,
             home: new MainPage(),
             theme: store.state.themeData,

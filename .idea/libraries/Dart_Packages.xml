@@ -422,6 +422,13 @@
             </list>
           </value>
         </entry>
+        <entry key="screen">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/screen-0.0.4/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="shared_preferences">
           <value>
             <list>
@@ -600,7 +607,7 @@
         <entry key="video_player">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/video_player-0.8.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/video_player-0.10.0+2/lib" />
             </list>
           </value>
         </entry>
@@ -694,6 +701,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/pubspec_parse-0.1.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/quiver-2.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/redux-3.0.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/screen-0.0.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/shared_preferences-0.4.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/shelf-0.7.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/shelf_packages_handler-1.0.4/lib" />
@@ -718,7 +726,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/typed_data-1.1.6/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/utf-0.9.0+5/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/vector_math-2.0.8/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/video_player-0.8.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/video_player-0.10.0+2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/vm_service_client-0.2.6/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/watcher-0.9.7+10/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/web_socket_channel-1.0.9/lib" />

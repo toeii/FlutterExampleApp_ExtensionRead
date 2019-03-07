@@ -12,7 +12,6 @@ class ERAppConfig {
   static final String BASE_URL = "http://baobab.kaiyanapp.com/api/v4/";
   static final String BASE_URL_V5 = "http://baobab.kaiyanapp.com/api/v5/";
   static final String BASE_URL_V6 = "http://baobab.kaiyanapp.com/api/v6/";
-  static final String BASE_URL_TT = "http://is.snssdk.com/api/news/feed/v51/";
   static final String DEF_IMAGE_URL = "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3916306502,1143475951&fm=26&gp=0.jpg";
 
   static const String PLATFORM_VERSION = "1.0";

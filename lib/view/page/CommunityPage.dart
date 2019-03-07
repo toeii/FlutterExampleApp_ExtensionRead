@@ -2,11 +2,13 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_extension_read/model/BrowseRecordBean.dart';
 import 'package:flutter_extension_read/model/CommunityBean.dart';
 import 'package:flutter_extension_read/model/CommunityItemBean.dart';
 import 'package:flutter_extension_read/service/ERAppConfig.dart';
 import 'package:flutter_extension_read/service/database/DatabaseHelper.dart';
 import 'package:flutter_extension_read/service/net/ERAppHttpClient.dart';
+import 'package:flutter_extension_read/view/page/PaperDetailPage.dart';
 import 'package:flutter_extension_read/view/page/WebLoadPage.dart';
 import 'package:flutter_extension_read/view/widget/EasyListView.dart';
 import 'package:flutter_extension_read/view/widget/NotEmptyText.dart';
@@ -44,7 +46,6 @@ class _CommunityPageState extends State<CommunityPage> with AutomaticKeepAliveCl
   @override
   void initState() {
     super.initState();
-
     initData();
   }
 
@@ -200,6 +201,20 @@ class _CommunityPageState extends State<CommunityPage> with AutomaticKeepAliveCl
     return
       new GestureDetector(
         onTap: () {
+          Navigator.push(
+            context,
+            new MaterialPageRoute(builder: (context) => new PaperDetailPage(
+              id:        contentDatas[index].data.id.toString(),
+              playUrl:   contentDatas[index].data.content.data.playUrl,
+              title:     tagName,
+              type:      "#社区动态",
+              desc:      contentDatas[index].data.content.data.description,
+              authorId:  contentDatas[index].data.header.id.toString(),
+              authorIcon:contentDatas[index].data.header.icon,
+              authorName:contentDatas[index].data.header.issuerName,
+              authorDesc:"发布：",
+            )),
+          );
 
         },
         child: new Container(
@@ -290,7 +305,8 @@ class _CommunityPageState extends State<CommunityPage> with AutomaticKeepAliveCl
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisSize: MainAxisSize.max,
                       children: <Widget>[
-                        new NotEmptyText(null!=contentDatas[index].data.header.issuerName?contentDatas[index].data.header.issuerName:"用户1000${index}",
+                        new NotEmptyText(
+                          null!=contentDatas[index].data.header.issuerName?contentDatas[index].data.header.issuerName:"用户1000${index}",
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: new TextStyle(

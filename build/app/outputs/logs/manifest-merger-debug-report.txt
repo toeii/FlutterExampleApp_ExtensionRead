@@ -7,6 +7,7 @@ INJECTED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/andro
 MERGED from [:video_player] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/video_player/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
 MERGED from [:fluttertoast] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/fluttertoast/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
 MERGED from [:shared_preferences] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/shared_preferences/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
+MERGED from [:screen] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/screen/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-11:12
 MERGED from [:sqflite] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/sqflite/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
 MERGED from [:flutter_webview_plugin] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/flutter_webview_plugin/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-5:12
 MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-hls-2.9.1.aar/7b0b648f99f33d10aa3452a62609a8f5/AndroidManifest.xml:17:1-24:12
@@ -71,7 +72,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha01] /Us
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0-alpha04] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/core-1.1.0-alpha04.aar/91d94bbb622f7308ef8621185e4042ba/AndroidManifest.xml:22:18-86
 	android:label
-		ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:17:9-37
+		ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:17:9-29
 	android:icon
 		ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:18:9-43
 	android:usesCleartextTraffic
@@ -118,6 +119,8 @@ MERGED from [:fluttertoast] /Users/Toeii/FlutterProjects/FlutterExampleApp_Exten
 MERGED from [:fluttertoast] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/fluttertoast/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/shared_preferences/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/shared_preferences/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:screen] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/screen/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-9:41
+MERGED from [:screen] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/screen/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-9:41
 MERGED from [:sqflite] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/sqflite/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
 MERGED from [:sqflite] /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/sqflite/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] /Users/Toeii/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-hls-2.9.1.aar/7b0b648f99f33d10aa3452a62609a8f5/AndroidManifest.xml:20:5-22:41

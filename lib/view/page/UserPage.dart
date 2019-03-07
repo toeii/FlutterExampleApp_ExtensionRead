@@ -25,7 +25,7 @@ class UserPage extends StatefulWidget {
 class _UserPageState extends State<UserPage> {
 
   static Size _sizeWH = window.physicalSize;
-  static var items = ["项目主页","浏览记录","切换主题","关于作者","注销账号"];
+  static var items = ["项目主页","浏览记录","切换主题","关于作者","清除缓存"];
 
   Widget itemBuilder(BuildContext context,int index) {
     return
@@ -102,7 +102,7 @@ class _UserPageState extends State<UserPage> {
             if(items[index] == "项目主页"){
               Navigator.push(
                 context,
-                new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'拓意 Extension',url:'https://github.com/toeii/FlutterExampleApp_ExtensionRead')),
+                new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'拓意阅读',url:'https://github.com/toeii/FlutterExampleApp_ExtensionRead')),
               );
             }else if(items[index] == "浏览记录"){
               Navigator.push(
@@ -116,7 +116,7 @@ class _UserPageState extends State<UserPage> {
                 context,
                 new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'关于作者',url:'https://github.com/toeii')),
               );
-            }else if(items[index] == "注销账号"){
+            }else if(items[index] == "清除缓存"){
               new DatabaseHelper().cleanNote();
 
               Fluttertoast.showToast(

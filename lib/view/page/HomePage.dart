@@ -22,12 +22,9 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   TabController _tabController;
 
-  DatabaseHelper _databaseHelper;
-
   @override
   void initState() {
     super.initState();
-    _databaseHelper = new DatabaseHelper();
     _tabController = new TabController(length: 2, vsync: this);
   }
 

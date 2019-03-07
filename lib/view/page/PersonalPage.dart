@@ -5,8 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_extension_read/model/PersonalBean.dart';
 import 'package:flutter_extension_read/model/PersonalInfoBean.dart';
 import 'package:flutter_extension_read/service/ERAppConfig.dart';
+import 'package:flutter_extension_read/service/database/DatabaseHelper.dart';
 import 'package:flutter_extension_read/service/net/ERAppHttpClient.dart';
+import 'package:flutter_extension_read/view/page/PaperDetailPage.dart';
 import 'package:flutter_extension_read/view/widget/EasyListView.dart';
+import 'package:flutter_extension_read/model/BrowseRecordBean.dart';
+import 'package:flutter_extension_read/view/page/WebLoadPage.dart';
 /**
  * Created by toeii
  * Date: 2019-01-16
@@ -36,9 +40,12 @@ class _PersonalPageState extends State<PersonalPage>{
   bool isLoadData = true;
   var foregroundWidget = Container( alignment: AlignmentDirectional.center, child: CircularProgressIndicator());
 
+  DatabaseHelper _databaseHelper;
+
   @override
   void initState() {
     super.initState();
+    _databaseHelper = new DatabaseHelper();
     initData();
   }
 
@@ -82,7 +89,7 @@ class _PersonalPageState extends State<PersonalPage>{
   Widget getHeaderBuilder(BuildContext context) {
     if(null != personalInfoData && null != personalInfoData.pgcInfo){
       return  new Container(
-        color: ERAppConfig.primarySwatch,
+        color: Theme.of(context).primaryColor,
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -197,10 +204,31 @@ class _PersonalPageState extends State<PersonalPage>{
 
   Widget getItemBuilder(BuildContext context,int index) {
     if(null != datas && datas.length>0 && null != datas[index].data.author){
-      return new Container(
-        color: Colors.white,
-        alignment: AlignmentDirectional.center,
-        child:_getContentItemView(index),
+      return
+        new GestureDetector(
+          onTap: () {
+          _databaseHelper.saveNote(new BrowseRecordBean(datas[index].data.id,datas[index].data.id.toString(),datas[index].data.title,datas[index].data.description,datas[index].data.webUrl.raw,datas[index].data.cover.feed));
+
+          Navigator.push(
+            context,
+            new MaterialPageRoute(builder: (context) => new PaperDetailPage(
+              id:        datas[index].data.id.toString(),
+              playUrl:   datas[index].data.playUrl,
+              title:     datas[index].data.title,
+              type:  "#"+datas[index].data.category,
+              desc:      datas[index].data.description,
+              authorId:  datas[index].data.author.id.toString(),
+              authorIcon:datas[index].data.author.icon,
+              authorName:datas[index].data.author.name,
+              authorDesc:datas[index].data.author.description,
+            )),
+          );
+        },
+          child: new Container(
+            color: Colors.white,
+            alignment: AlignmentDirectional.center,
+            child:_getContentItemView(index),
+          ),
       );
     }else{
       return new Container(
@@ -212,7 +240,7 @@ class _PersonalPageState extends State<PersonalPage>{
   @override
   Widget build(BuildContext context) {
     return new Container(
-      color: ERAppConfig.primarySwatch,
+      color: Theme.of(context).primaryColor,
       child: RefreshIndicator(
         onRefresh: _refresh,
         child:  EasyListView(
@@ -316,7 +344,7 @@ class _PersonalPageState extends State<PersonalPage>{
                               new Container(
                                 margin:const EdgeInsets.fromLTRB(0,8,4,8),
                                 padding:const EdgeInsets.fromLTRB(5,2,6,3),
-                                color: Colors.blue,
+                                color: Theme.of(context).primaryColor,
                                 child: new Text(
                                   null != datas[index].data.tags && datas[index].data.tags.length>0 ?datas[index].data.tags[0].name:"",
                                   style: new TextStyle(
@@ -329,7 +357,7 @@ class _PersonalPageState extends State<PersonalPage>{
                               new Container(
                                 margin:const EdgeInsets.fromLTRB(0,8,4,8),
                                 padding:const EdgeInsets.fromLTRB(5,2,6,3),
-                                color: Colors.blue,
+                                color: Theme.of(context).primaryColor,
                                 child: new Text(
                                   null != datas[index].data.tags && datas[index].data.tags.length>1?datas[index].data.tags[1].name:"",
                                   style: new TextStyle(
@@ -342,7 +370,7 @@ class _PersonalPageState extends State<PersonalPage>{
                               new Container(
                                 margin:const EdgeInsets.fromLTRB(0,8,4,8),
                                 padding:const EdgeInsets.fromLTRB(5,2,6,3),
-                                color: Colors.blue,
+                                color: Theme.of(context).primaryColor,
                                 child: new Text(
                                   null != datas[index].data.tags && datas[index].data.tags.length>2?datas[index].data.tags[2].name:"",
                                   style: new TextStyle(

@@ -104,12 +104,20 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
                    datas[0].data.itemList[index].data.content.data.webUrl.raw,
                    datas[0].data.itemList[index].data.content.data.cover.feed));
 
-                Navigator.push(
-                  context,
-                  new MaterialPageRoute(builder: (context) => new WebLoadPage(
-                      title:datas[0].data.itemList[index].data.content.data.title,
-                      url:datas[0].data.itemList[index].data.content.data.webUrl.raw)),
-                );
+               Navigator.push(
+                 context,
+                 new MaterialPageRoute(builder: (context) => new PaperDetailPage(
+                   id:datas[0].data.itemList[index].data.content.data.id.toString(),
+                   playUrl:datas[0].data.itemList[index].data.content.data.playUrl,
+                   title:datas[0].data.itemList[index].data.content.data.title,
+                   type:datas[0].data.itemList[index].data.header.description,
+                   desc:datas[0].data.itemList[index].data.content.data.description,
+                   authorId:datas[0].data.itemList[index].data.content.data.author.id.toString(),
+                   authorIcon:datas[0].data.itemList[index].data.content.data.author.icon,
+                   authorName:datas[0].data.itemList[index].data.content.data.author.name,
+                   authorDesc:datas[0].data.itemList[index].data.content.data.author.description,
+                 )),
+               );
               },
             ),
             height: 150,
@@ -250,114 +258,115 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
   }
 
   Widget getItemBuilder(BuildContext context,int index) {
-    if(datas[index].type == "banner"){
-      return new Container(
-        alignment: AlignmentDirectional.center,
-        child:_getLvBannerItemView(context,index),
-      );
-    }else if(datas[index].type == "followCard"){
-      return new Container(
-        alignment: AlignmentDirectional.center,
-        child:_getLvCardItemView(context,index),
-      );
-    }else if(datas[index].type == "videoSmallCard"){
-      return new Container(
-        alignment: AlignmentDirectional.center,
-        child:_getLvSmallItemView(context,index),
-      );
+    if(datas.length>0){
+      if(datas[index].type == "banner"){
+        return new Container(
+          alignment: AlignmentDirectional.center,
+          child:_getLvBannerItemView(context,index),
+        );
+      }else if(datas[index].type == "followCard"){
+        return new Container(
+          alignment: AlignmentDirectional.center,
+          child:_getLvCardItemView(context,index),
+        );
+      }else if(datas[index].type == "videoSmallCard"){
+        return new Container(
+          alignment: AlignmentDirectional.center,
+          child:_getLvSmallItemView(context,index),
+        );
+      }
     }
-    return new Divider();
+    return  new Container(
+      height: 0,
+    );
   }
 
   Widget _getLvCardItemView(BuildContext context,int index) {
-    return new Container(
-      padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
-      child: new Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.max,
-        children: <Widget>[
-          new Row(
-            children: <Widget>[
-              new NotEmptyText(
-                null!= datas[index].data.header.title? datas[index].data.header.title:"推荐广告位${index}",
-                style: new TextStyle(
-                  color: Colors.black,
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                ),
-                textAlign: TextAlign.center,
-              ),
-              new Icon(Icons.keyboard_arrow_right)
-            ],
-          ),
-          new NotEmptyText("",
-              style: new TextStyle(
-                fontSize: 10,
-              )),
-          new Container(
-            width: window.physicalSize.width,
-            height: 200,
-            decoration: new BoxDecoration(
-              shape: BoxShape.rectangle,
-              borderRadius: new BorderRadius.circular(4.0),
-              image: new DecorationImage(
-                  image: new NetworkImage(null != datas[index].data.header.icon?datas[index].data.header.icon:ERAppConfig.DEF_IMAGE_URL),
-                  fit: BoxFit.fill),
-            ),
-          ),
-
-          new GestureDetector(
-            onTap: () {
-              if(null != datas[index].data.content.data.author){
-                Navigator.push(
-                  context,
-                  new MaterialPageRoute(
-                      builder: (context) => new PersonalPage(id:datas[index].data.content.data.author.id)),
-                );
-              }
-            },
-            child:new Row(
+    return new GestureDetector(
+        onTap: () {
+          if(null != datas[index].data.content.data.author){
+            Navigator.push(
+              context,
+              new MaterialPageRoute(
+                  builder: (context) => new PersonalPage(id:datas[index].data.content.data.author.id)),
+            );
+          }
+        },
+        child:new Container(
+            padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
+            child: new Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
               children: <Widget>[
+                new Row(
+                  children: <Widget>[
+                    new NotEmptyText(
+                      null!= datas[index].data.header.title? datas[index].data.header.title:"推荐广告位${index}",
+                      style: new TextStyle(
+                        color: Colors.black,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    new Icon(Icons.keyboard_arrow_right)
+                  ],
+                ),
+                new NotEmptyText("",
+                    style: new TextStyle(
+                      fontSize: 10,
+                    )),
                 new Container(
-                  margin: const EdgeInsets.fromLTRB(0, 10, 10, 10),
-                  width: 46,
-                  height: 46,
+                  width: window.physicalSize.width,
+                  height: 200,
                   decoration: new BoxDecoration(
-                    shape: BoxShape.circle,
+                    shape: BoxShape.rectangle,
+                    borderRadius: new BorderRadius.circular(4.0),
                     image: new DecorationImage(
-                        image: new NetworkImage(null!=datas[index].data.content.data.author?datas[index].data.content.data.author.icon:ERAppConfig.DEF_IMAGE_URL),
-                        fit: BoxFit.fill),
+                        image: new NetworkImage(null != datas[index].data.header.icon?datas[index].data.header.icon:ERAppConfig.DEF_IMAGE_URL),
+                        fit: BoxFit.cover),
                   ),
                 ),
-                new Container(
-                  width: 300,
-                  child: new Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.max,
+                  new Row(
                     children: <Widget>[
-                      new NotEmptyText(null!=datas[index].data.content.data.author?datas[index].data.content.data.author.name:"广告标题${index}",
-                          style: new TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          )),
-                      new NotEmptyText(null!=datas[index].data.content.data.author?datas[index].data.content.data.author.description:"广告内容${index}",
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: new TextStyle(
-                            color: Colors.black45,
-                            fontSize: 14,
-                          )),
+                      new Container(
+                        margin: const EdgeInsets.fromLTRB(0, 10, 10, 10),
+                        width: 46,
+                        height: 46,
+                        decoration: new BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: new DecorationImage(
+                              image: new NetworkImage(null!=datas[index].data.content.data.author?datas[index].data.content.data.author.icon:ERAppConfig.DEF_IMAGE_URL),
+                              fit: BoxFit.fill),
+                        ),
+                      ),
+                      new Container(
+                        width: 300,
+                        child: new Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.max,
+                          children: <Widget>[
+                            new NotEmptyText(null!=datas[index].data.content.data.author?datas[index].data.content.data.author.name:"广告标题${index}",
+                                style: new TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                )),
+                            new NotEmptyText(null!=datas[index].data.content.data.author?datas[index].data.content.data.author.description:"广告内容${index}",
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: new TextStyle(
+                                  color: Colors.black45,
+                                  fontSize: 14,
+                                )),
+                          ],
+                        ),
+                      )
                     ],
                   ),
-                )
               ],
             ),
           ),
-
-
-        ],
-      ),
     );
 
   }
@@ -412,10 +421,53 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
         child: new Column(children: <Widget>[
           new GestureDetector(
             onTap: () {
-              Navigator.push(
-                context,
-                new MaterialPageRoute(builder: (context) => new PaperDetailPage()),
-              );
+              if(null != datas[index].data.content && null != datas[index].data.header){
+                _databaseHelper.saveNote(new BrowseRecordBean(
+                    datas[index].data.content.data.id,
+                    datas[index].data.content.data.id.toString(),
+                    datas[index].data.content.data.title,
+                    datas[index].data.content.data.description,
+                    datas[index].data.content.data.webUrl.raw,
+                    datas[index].data.content.data.cover.feed));
+
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(builder: (context) => new PaperDetailPage(
+                    id:datas[index].data.content.data.id.toString(),
+                    playUrl:datas[index].data.content.data.playUrl,
+                    title:datas[index].data.content.data.title,
+                    type:datas[index].data.header.description,
+                    desc:datas[index].data.content.data.description,
+                    authorId:datas[index].data.content.data.author.id.toString(),
+                    authorIcon:datas[index].data.content.data.author.icon,
+                    authorName:datas[index].data.content.data.author.name,
+                    authorDesc:datas[index].data.content.data.author.description,
+                  )),
+                );
+              }else{
+                _databaseHelper.saveNote(new BrowseRecordBean(
+                    datas[index].data.id,
+                    datas[index].data.id.toString(),
+                    datas[index].data.title,
+                    datas[index].data.description,
+                    datas[index].data.webUrl.raw,
+                    datas[index].data.cover.feed));
+
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(builder: (context) => new PaperDetailPage(
+                    id:datas[index].data.id.toString(),
+                    playUrl:datas[index].data.playUrl,
+                    title:datas[index].data.title,
+                    type:"#"+datas[index].data.category,
+                    desc:datas[index].data.description,
+                    authorId:datas[index].data.author.id.toString(),
+                    authorIcon:datas[index].data.author.icon,
+                    authorName:datas[index].data.author.name,
+                    authorDesc:datas[index].data.author.description,
+                  )),
+                );
+              }
             },
             child: new Row(
               children: <Widget>[

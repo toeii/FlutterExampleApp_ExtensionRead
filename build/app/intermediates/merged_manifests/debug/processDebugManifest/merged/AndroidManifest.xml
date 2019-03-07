@@ -30,7 +30,7 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="拓意 Extension"
+        android:label="拓意阅读"
         android:usesCleartextTraffic="true" >
         <activity
             android:name="com.toeii.read.MainActivity"
