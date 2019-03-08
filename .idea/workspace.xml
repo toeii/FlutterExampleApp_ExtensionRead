@@ -10,13 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcc70c83-c28a-4196-b1a6-5331ee818a54" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/service/net/ERAppHttpClient.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/service/net/ERAppHttpClient.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/page/CommunityPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/CommunityPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/page/HomeDailyPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/HomeDailyPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/page/HomeRecommendPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/HomeRecommendPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/page/PaperDetailPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/PaperDetailPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/page/PersonalPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/page/PersonalPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BrowseRecordBean.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/model/BrowseRecordBean.dart">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-32">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="557">
+              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
             </state>
           </provider>
         </entry>
@@ -39,83 +33,8 @@
       <file leaf-file-name="pubspec.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="24" column="15" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ERAppState.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/service/redux/ERAppState.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ERAppHttpClient.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/service/net/ERAppHttpClient.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseHelper.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/service/database/DatabaseHelper.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ERAppConfig.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/service/ERAppConfig.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="14" column="50" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommunityPage.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/view/page/CommunityPage.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="54" column="44" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommunityBean.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/model/CommunityBean.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeRecommendBean.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/model/HomeRecommendBean.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeDailyBean.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/model/HomeDailyBean.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="19" />
+            <state relative-caret-position="198">
+              <caret line="20" column="17" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -233,10 +152,10 @@
         <option value="$PROJECT_DIR$/lib/view/page/PersonalPage.dart" />
         <option value="$PROJECT_DIR$/lib/service/redux/LocaleRedux.dart" />
         <option value="$PROJECT_DIR$/lib/service/redux/ERAppState.dart" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/lib/service/net/ERAppHttpClient.dart" />
         <option value="$PROJECT_DIR$/lib/view/page/CommunityPage.dart" />
         <option value="$PROJECT_DIR$/lib/model/CommunityBean.dart" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -341,7 +260,20 @@
             <path>
               <item name="FlutterExampleApp_ExtensionRead" type="b2602c69:ProjectViewProjectNode" />
               <item name="FlutterExampleApp_ExtensionRead" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlutterExampleApp_ExtensionRead" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlutterExampleApp_ExtensionRead" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlutterExampleApp_ExtensionRead" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlutterExampleApp_ExtensionRead" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="widget" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -362,17 +294,18 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi" />
-      <recent name="$PROJECT_DIR$/lib/service/net" />
-      <recent name="$PROJECT_DIR$/lib/model/entity" />
-      <recent name="$PROJECT_DIR$/lib/view" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib/service/redux" />
       <recent name="$PROJECT_DIR$/android/app/src/main/res" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/lib/model/entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi" />
+      <recent name="$PROJECT_DIR$/lib/service/net" />
+      <recent name="$PROJECT_DIR$/lib/model/entity" />
+      <recent name="$PROJECT_DIR$/lib/view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -495,6 +428,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
       <window_info id="Build Variants" order="2" sideWeight="0.50141644" side_tool="true" weight="0.23828755" />
@@ -707,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/widget/EasyListView.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="172" column="8" lean-forward="true" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/view/widget/BarBottomDivider.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -785,13 +712,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/service/redux/LocaleRedux.dart" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/view/page/MainPage.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -872,16 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/service/net/ERAppHttpClient.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/view/page/CommunityPage.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
@@ -910,17 +820,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+    <entry file="file://$PROJECT_DIR$/lib/service/redux/ERAppState.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="24" column="15" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="15" />
+        <state relative-caret-position="300">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/service/redux/ERAppState.dart">
+    <entry file="file://$PROJECT_DIR$/lib/service/net/ERAppHttpClient.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="333">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view/widget/EasyListView.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="710">
+          <caret line="172" column="8" lean-forward="true" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>

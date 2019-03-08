@@ -6,9 +6,32 @@ Build legendary Extension Read App in flutter.
 ### Show some :heart: and star the repo to support the project
 
 ### Screenshots
+<img src="https://github.com/toeii/FlutterExampleApp_ExtensionRead/blob/master/images/app_fotojet_01.jpg" />
+<img src="https://github.com/toeii/FlutterExampleApp_ExtensionRead/blob/master/images/app_fotojet_02.jpg" />
 
 ### Framework & Egg
+<img src="https://github.com/toeii/FlutterExampleApp_ExtensionRead/blob/master/images/flutter_extension_read_egg.jpg" />
 
+### Framework
+
+| Lib (SDK v1.2.43)          |
+| -------------------------- |
+| **dio**                    |
+| **shared_preferences**     |
+| **fluttertoast**           |
+| **flutter_redux**          |
+| **cupertino_icons**        |
+| **connectivity**           |
+| **flutter_markdown**       |
+| **json_annotation**        |
+| **json_serializable**      |
+| **screen**                 |
+| **event_bus**              |
+| **flutter_spinkit**        |
+| **get_version**            |
+| **flutter_webview_plugin** |
+| **sqflite**                |
+| **photo_view**             |
 
 ## License
 
