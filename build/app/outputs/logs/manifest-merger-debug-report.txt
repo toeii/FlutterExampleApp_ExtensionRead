@@ -74,7 +74,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha01] /Us
 	android:label
 		ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:17:9-29
 	android:icon
-		ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:18:9-43
+		ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:18:9-51
 	android:usesCleartextTraffic
 		ADDED from /Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/android/app/src/main/AndroidManifest.xml:19:9-44
 	android:name

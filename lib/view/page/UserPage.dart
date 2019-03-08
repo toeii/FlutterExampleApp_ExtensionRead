@@ -43,40 +43,37 @@ class _UserPageState extends State<UserPage> {
       appBar: new PreferredSize(
         child: new AppBar(
           flexibleSpace: FlexibleSpaceBar(
-            centerTitle: true,
-            title:new Container(
-                padding:const EdgeInsets.fromLTRB(0,50,0,0),
-                child: new Column(
-                  children: <Widget>[
-                    new Container(
-                      height: 200,
-                      width: _sizeWH.width,
-                      child: new Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          new Container(
-                            width: 90,
-                            height: 90,
-                            decoration: new BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: new Border.all(color: Color(0xFFCCCCCC), width: 1), // 边色与边宽度
-                              boxShadow: [BoxShadow(color: Color(0xFF0F0F0F), offset: Offset(0, 0),    blurRadius: 20.0, spreadRadius: 2.0),],
-                              image: new DecorationImage(
-                                  image: new NetworkImage( "https://avatars1.githubusercontent.com/u/11296934?s=460&v=4"),
-                                  fit: BoxFit.fill),
+              centerTitle: true,
+              title:new Container(
+                  padding:const EdgeInsets.fromLTRB(0,50,0,0),
+                  child: new Column(
+                    children: <Widget>[
+                      new Container(
+                        height: 200,
+                        width: _sizeWH.width,
+                        child: new Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            new Container(
+                              width: 90,
+                              height: 90,
+                              decoration: new BoxDecoration(
+                                shape: BoxShape.circle,
+                                image: new DecorationImage(
+                                    image: new AssetImage("images/logo_extension_read.png"),fit: BoxFit.cover),
+                              ),
                             ),
-                          ),
-                          new Container(
-                            margin:const EdgeInsets.fromLTRB(0,20,0,0),
-                            child: new Text("Toeii",style: new TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),),
-                          ),
-                        ],
+                            new Container(
+                              margin:const EdgeInsets.fromLTRB(0,20,0,0),
+                              child: new Text("拓意阅读 v1.0",style: new TextStyle(fontSize: 18,color: Colors.white,fontWeight: FontWeight.bold),),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
-                )
-            )
+                    ],
+                  )
+              )
           ),
         ),
         preferredSize: Size.fromHeight(250),
@@ -96,50 +93,50 @@ class _UserPageState extends State<UserPage> {
   Widget _getLvItemChildView(BuildContext context,int index) {
     return
       new StoreBuilder<ERAppState>(
-        builder: (context, store) {
-        return new GestureDetector(
-          onTap: () {
-            if(items[index] == "项目主页"){
-              Navigator.push(
-                context,
-                new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'拓意阅读',url:'https://github.com/toeii/FlutterExampleApp_ExtensionRead')),
-              );
-            }else if(items[index] == "浏览记录"){
-              Navigator.push(
-                  context,
-                  new MaterialPageRoute(builder: (context) => new BrowseRecordPage(),)
-              );
-            }else if(items[index] == "切换主题"){
-              showThemeDialog(context, store);
-            }else if(items[index] == "关于作者"){
-              Navigator.push(
-                context,
-                new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'关于作者',url:'https://github.com/toeii')),
-              );
-            }else if(items[index] == "清除缓存"){
-              new DatabaseHelper().cleanNote();
+          builder: (context, store) {
+            return new GestureDetector(
+              onTap: () {
+                if(items[index] == "项目主页"){
+                  Navigator.push(
+                    context,
+                    new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'拓意阅读',url:'https://github.com/toeii/FlutterExampleApp_ExtensionRead')),
+                  );
+                }else if(items[index] == "浏览记录"){
+                  Navigator.push(
+                      context,
+                      new MaterialPageRoute(builder: (context) => new BrowseRecordPage(),)
+                  );
+                }else if(items[index] == "切换主题"){
+                  showThemeDialog(context, store);
+                }else if(items[index] == "关于作者"){
+                  Navigator.push(
+                    context,
+                    new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'关于作者',url:'https://github.com/toeii')),
+                  );
+                }else if(items[index] == "清除缓存"){
+                  new DatabaseHelper().cleanNote();
 
-              Fluttertoast.showToast(
-                  msg: "清除成功!",
-                  toastLength: Toast.LENGTH_SHORT,
-                  gravity: ToastGravity.BOTTOM,
-                  timeInSecForIos: 1,
-                  backgroundColor: Colors.black,
-                  textColor: Colors.white,
-                  fontSize: 16.0
-              );
-            }
-          },
-          child:new Container(
-              height: 100,
-              child: new Center(
-                child: new Text(items[index],style: new TextStyle(fontSize: 16,color: Colors.grey),
-                ),
-              )
-          ),
-        );
-      }
-    );
+                  Fluttertoast.showToast(
+                      msg: "清除成功!",
+                      toastLength: Toast.LENGTH_SHORT,
+                      gravity: ToastGravity.BOTTOM,
+                      timeInSecForIos: 1,
+                      backgroundColor: Colors.black,
+                      textColor: Colors.white,
+                      fontSize: 16.0
+                  );
+                }
+              },
+              child:new Container(
+                  height: 100,
+                  child: new Center(
+                    child: new Text(items[index],style: new TextStyle(fontSize: 16,color: Colors.grey),
+                    ),
+                  )
+              ),
+            );
+          }
+      );
 
   }
 

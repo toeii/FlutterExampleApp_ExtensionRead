@@ -15,7 +15,7 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="拓意阅读"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo_extension_read"
         android:usesCleartextTraffic="true">
         <activity
             android:name="com.toeii.read.MainActivity"

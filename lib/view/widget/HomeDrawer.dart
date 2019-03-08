@@ -37,64 +37,64 @@ class HomeDrawer extends StatelessWidget {
       child: new StoreBuilder<ERAppState>(
         builder: (context, store) {
           return new Container(
-              width: 240,
-              child:new Drawer(
-                child: new ListView(
-                  padding: const EdgeInsets.only(),
-                  children: <Widget>[
-                    new UserAccountsDrawerHeader(
-                      accountName: new Text('Toeii'),
-                      accountEmail: new Text('https://github.com/toeii'),
-                      currentAccountPicture: new CircleAvatar(
-                        backgroundImage: new NetworkImage("https://avatars1.githubusercontent.com/u/11296934?s=460&v=4"),
-                      ),
+            width: 240,
+            child:new Drawer(
+              child: new ListView(
+                padding: const EdgeInsets.only(),
+                children: <Widget>[
+                  new UserAccountsDrawerHeader(
+                    accountName: new Text('拓意阅读 v1.0'),
+                    accountEmail: new Text('本项目仅供学习与参考'),
+                    currentAccountPicture: new CircleAvatar(
+                      backgroundImage:new AssetImage("images/logo_extension_read.png"),
                     ),
-                    new ListTile(leading: Icon(Icons.work),title: Text('项目主页'),
-                        onTap: () {
-                          Navigator.push(
+                  ),
+                  new ListTile(leading: Icon(Icons.work),title: Text('项目主页'),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'拓意阅读',url:'https://github.com/toeii/FlutterExampleApp_ExtensionRead')),
+                        );
+                      }
+                  ),
+                  new ListTile(leading: Icon(Icons.visibility),title: Text('浏览记录'),
+                      onTap: () {
+                        Navigator.push(
                             context,
-                            new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'拓意阅读',url:'https://github.com/toeii/FlutterExampleApp_ExtensionRead')),
-                          );
-                        }
-                    ),
-                    new ListTile(leading: Icon(Icons.visibility),title: Text('浏览记录'),
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              new MaterialPageRoute(builder: (context) => new BrowseRecordPage(),)
-                          );
-                        }
-                    ),
-                    new ListTile(leading: Icon(Icons.build),title: Text('切换主题'),
-                        onTap: () {
-                          showThemeDialog(context, store);
-                        }),
-                    new ListTile(leading: Icon(Icons.email),title: Text('关于作者'),
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'关于作者',url:'https://github.com/toeii')),
-                          );
-                        }),
-                    new ListTile(leading: Icon(Icons.swap_vertical_circle),title: Text('清除缓存'),
-                        onTap: () {
-                          new DatabaseHelper().cleanNote();
+                            new MaterialPageRoute(builder: (context) => new BrowseRecordPage(),)
+                        );
+                      }
+                  ),
+                  new ListTile(leading: Icon(Icons.build),title: Text('切换主题'),
+                      onTap: () {
+                        showThemeDialog(context, store);
+                      }),
+                  new ListTile(leading: Icon(Icons.email),title: Text('关于作者'),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          new MaterialPageRoute(builder: (context) => new WebLoadPage(title:'关于作者',url:'https://github.com/toeii')),
+                        );
+                      }),
+                  new ListTile(leading: Icon(Icons.swap_vertical_circle),title: Text('清除缓存'),
+                      onTap: () {
+                        new DatabaseHelper().cleanNote();
 
-                          Fluttertoast.showToast(
-                              msg: "清除成功!",
-                              toastLength: Toast.LENGTH_SHORT,
-                              gravity: ToastGravity.BOTTOM,
-                              timeInSecForIos: 1,
-                              backgroundColor: Colors.black,
-                              textColor: Colors.white,
-                              fontSize: 16.0
-                          );
-                        }
-                    ),
+                        Fluttertoast.showToast(
+                            msg: "清除成功!",
+                            toastLength: Toast.LENGTH_SHORT,
+                            gravity: ToastGravity.BOTTOM,
+                            timeInSecForIos: 1,
+                            backgroundColor: Colors.black,
+                            textColor: Colors.white,
+                            fontSize: 16.0
+                        );
+                      }
+                  ),
 //              new AboutListTile(),
-                  ],
-                ),
+                ],
               ),
+            ),
           );
         },
       ),
