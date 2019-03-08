@@ -6,8 +6,8 @@ import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
  */
 ///加载网页
 class WebLoadPage extends StatefulWidget {
-  var title = "toeii";
-  var url = "https://github.com/toeii";
+  var title = "";
+  var url = "";
 
   @override
   _WebLoadPageState createState() => _WebLoadPageState();

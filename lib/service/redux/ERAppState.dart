@@ -4,7 +4,10 @@
  */
 import 'package:flutter/material.dart';
 import 'package:flutter_extension_read/service/redux/ThemeRedux.dart';
-
+/**
+ * Created by toeii
+ * Date: 2019-01-16
+ */
 ///全局Redux
 class ERAppState {
 
@@ -15,7 +18,6 @@ class ERAppState {
 
 }
 
-///创建 Reducer
 ERAppState appReducer(ERAppState state, action) {
   return ERAppState(
     themeData: ThemeDataReducer(state.themeData, action),

@@ -63,7 +63,6 @@ class _PersonalPageState extends State<PersonalPage>{
                 if(page>1){
                   setState(() {
                     hasNextPage = personalBean.itemList.length > 0;
-//                    personalInfoData = personalInfoBean;
                     datas += personalBean.itemList;
                     isLoadData = false;
                   });
@@ -402,22 +401,6 @@ class _PersonalPageState extends State<PersonalPage>{
                                   ),
                                 ),
 
-                                //TODO 播放器待优化
-                                /*_controller.value.initialized ? AspectRatio(
-                                  aspectRatio: _controller.value.aspectRatio,
-                                  child: VideoPlayer(_controller),
-                                )
-                                    : Container(child: CircularProgressIndicator(),),
-
-                                Offstage(
-                                  offstage:  _controller.value.isPlaying,
-                                  child: new FloatingActionButton(
-                                    onPressed: _controller.value.isPlaying ? _controller.pause : _controller.play,
-                                    child: Icon(
-                                      _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-                                    ),
-                                  ),
-                                )*/
                               ]),
 
                         ),

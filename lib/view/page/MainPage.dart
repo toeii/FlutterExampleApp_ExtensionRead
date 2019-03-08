@@ -88,7 +88,7 @@ class _MainPageState extends State<MainPage> {
              ),
            ],
          ),
-//       body:_bodyPages[_pageIndex],  //解决BottomNavigationBar导致页面重新绘制的问题
+//       body:_bodyPages[_pageIndex],
          bottomNavigationBar:
             Container(
               height: 55,

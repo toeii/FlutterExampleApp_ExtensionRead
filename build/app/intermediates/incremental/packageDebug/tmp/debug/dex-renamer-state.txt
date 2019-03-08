@@ -1,4 +1,4 @@
-#Fri Mar 08 20:09:26 CST 2019
+#Fri Mar 08 20:45:23 CST 2019
 base.0=/Users/Toeii/FlutterProjects/FlutterExampleApp_ExtensionRead/build/app/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

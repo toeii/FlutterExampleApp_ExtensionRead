@@ -71,7 +71,7 @@ class AppHttpClient {
       statusCode = response.statusCode;
 
       if (statusCode < 0) {
-        errorMsg = "网络请求错误,状态码:" + statusCode.toString();
+        errorMsg = "<net> error code:" + statusCode.toString();
         _handError(errorCallBack, errorMsg);
         return;
       }
