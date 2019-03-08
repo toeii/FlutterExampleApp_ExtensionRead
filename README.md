@@ -49,7 +49,4 @@ Build legendary Extension Read App in flutter.
     See the License for the specific language governing permissions and
     limitations under the License.
 
-## Getting Started
 
-    For help getting started with Flutter, view our online
-    ![documentation](https://flutter.io/).
