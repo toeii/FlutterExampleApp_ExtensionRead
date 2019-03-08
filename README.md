@@ -9,7 +9,7 @@ Build legendary Extension Read App in flutter.
 <img src="https://github.com/toeii/FlutterExampleApp_ExtensionRead/blob/master/images/app_fotojet_01.jpg" />
 <img src="https://github.com/toeii/FlutterExampleApp_ExtensionRead/blob/master/images/app_fotojet_02.jpg" />
 
-### Framework & Egg
+### Egg
 <img src="https://github.com/toeii/FlutterExampleApp_ExtensionRead/blob/master/images/flutter_extension_read_egg.jpg" />
 
 ### Framework
