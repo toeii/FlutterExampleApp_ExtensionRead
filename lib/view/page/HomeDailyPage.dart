@@ -97,7 +97,7 @@ class _HomeDailyPageState extends State<HomeDailyPage> with AutomaticKeepAliveCl
 
   void initData(){
     String requestUrl = ERAppConfig.BASE_URL_V5 + "/index/tab/feed?udid=55b862f0d6714f609bd6e45947f8789f0ff90f48&date="+new DateTime.now().millisecondsSinceEpoch.toString()+"&num="+page.toString();
-    AppHttpClient.get(requestUrl, (data) {
+    ERAppHttpClient.get(requestUrl, (data) {
       if(null != data) {
         HomeDailyBean homeDailyBean = HomeDailyBean.fromJson(data);
         if (null != homeDailyBean) {

@@ -65,7 +65,7 @@ class _PaperDetailPageState extends State<PaperDetailPage>{
 
   void initData() {
     String requestUrl = ERAppConfig.BASE_URL + "video/related?udid=55b862f0d6714f609bd6e45947f8789f0ff90f48&id="+widget.id.toString();
-    AppHttpClient.get(requestUrl, (data) {
+    ERAppHttpClient.get(requestUrl, (data) {
       if(null != data) {
         HomeRecommendBean home = HomeRecommendBean.fromJson(data);
         if (null != home) {

@@ -236,7 +236,7 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
 
   void initData(){
     String requestUrl = ERAppConfig.BASE_URL_V5 + "index/tab/allRec?&isOldUser=true&udid=55b862f0d6714f609bd6e45947f8789f0ff90f48&page="+page.toString();
-    AppHttpClient.get(requestUrl, (data) {
+    ERAppHttpClient.get(requestUrl, (data) {
       if(null != data) {
         HomeRecommendBean home = HomeRecommendBean.fromJson(data);
         if (null != home) {

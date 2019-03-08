@@ -51,12 +51,12 @@ class _PersonalPageState extends State<PersonalPage>{
 
   void initData(){
     String requestUser = ERAppConfig.BASE_URL_V5 + "userInfo/tab?id="+widget.id.toString()+"&userType=PGC";
-    AppHttpClient.get(requestUser, (data) {
+    ERAppHttpClient.get(requestUser, (data) {
       if(null != data) {
         PersonalInfoBean personalInfoBean = PersonalInfoBean.fromJson(data);
         if(null != personalInfoBean.tabInfo){
           String requestPopular = ERAppConfig.BASE_URL+ "pgcs/videoList?id="+widget.id.toString()+"&strategy=mostPopular&udid=55b862f0d6714f609bd6e45947f8789f0ff90f48&start="+datas.length.toString()+"+&num=20".toString();
-          AppHttpClient.get(requestPopular, (data1) {
+          ERAppHttpClient.get(requestPopular, (data1) {
             if(null != data1) {
               PersonalBean personalBean = PersonalBean.fromJson(data1);
               if (null != personalBean) {

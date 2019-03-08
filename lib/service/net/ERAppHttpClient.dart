@@ -5,7 +5,7 @@ import 'package:flutter_extension_read/service/ERAppConfig.dart';
  * Date: 2019-01-16
  */
 ///网络处理类
-class AppHttpClient {
+class ERAppHttpClient {
   static const String GET = "get";
   static const String POST = "post";
 

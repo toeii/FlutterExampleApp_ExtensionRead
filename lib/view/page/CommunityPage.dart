@@ -53,7 +53,7 @@ class _CommunityPageState extends State<CommunityPage> with AutomaticKeepAliveCl
     headDatas.clear();
 
     String requestUrl = ERAppConfig.BASE_URL_V6 + "community/tab/rec?udid=55b862f0d6714f609bd6e45947f8789f0ff90f48&vc=461&deviceModel=PBAT00".toString();
-    AppHttpClient.get(requestUrl, (data) {
+    ERAppHttpClient.get(requestUrl, (data) {
       if(null != data) {
         CommunityBean communityBean = CommunityBean.fromJson(data);
         if (null != communityBean) {
@@ -73,7 +73,7 @@ class _CommunityPageState extends State<CommunityPage> with AutomaticKeepAliveCl
 
   void initListData(int id,String name){
     String requestUrl = ERAppConfig.BASE_URL_V6 + "tag/dynamics?id="+id.toString()+"&start="+contentDatas.length.toString()+"+&num=20".toString();
-    AppHttpClient.get(requestUrl, (data) {
+    ERAppHttpClient.get(requestUrl, (data) {
       if(null != data) {
         CommunityItemBean communityItemBean = CommunityItemBean.fromJson(data);
         if(null != communityItemBean){
