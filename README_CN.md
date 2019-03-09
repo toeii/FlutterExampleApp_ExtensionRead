@@ -2,7 +2,6 @@
 # 拓意阅读
 
 一款清新简单的信息类App。应用数据来源开眼api，项目简单易懂，对想学习Flutter的人非常友好
-[English](https://github.com/toeii/FlutterExampleApp_ExtensionRead/blob/master/README.md)
 
 ### 如果对你有所帮助:heart:，欢迎提出issues和start
 
