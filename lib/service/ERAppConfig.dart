@@ -28,7 +28,7 @@ class ERAppConfig {
     return [
       primarySwatch,
       Colors.brown,
-      Colors.deepPurpleAccent,
+      Colors.deepPurple,
       Colors.teal,
       Colors.amber,
       Colors.blueGrey,

@@ -230,7 +230,6 @@ class _HomeRecommendPageState extends State<HomeRecommendPage> with AutomaticKee
 
   _requestMoreData() {
     page++;
-    print('page = $page');
     initData();
   }
 
