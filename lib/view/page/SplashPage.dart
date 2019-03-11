@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter_extension_read/view/page/MainPage.dart';
+
 /**
  * Created by toeii
  * Date: 2019-01-16

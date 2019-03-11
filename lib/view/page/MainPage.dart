@@ -1,45 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_extension_read/service/ERAppConfig.dart';
-import 'package:flutter_extension_read/service/redux/ERAppState.dart';
-
 import 'package:flutter_extension_read/view/page/CommunityPage.dart';
 import 'package:flutter_extension_read/view/page/HomePage.dart';
 import 'package:flutter_extension_read/view/page/UserPage.dart';
-import 'package:flutter_redux/flutter_redux.dart';
-import 'package:redux/redux.dart';
 import 'package:sqflite/sqflite.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-
-  final store = new Store<ERAppState>(
-    appReducer,
-    ///init store
-    initialState: new ERAppState(
-        themeData: new ThemeData(
-          primarySwatch: ERAppConfig.primarySwatch,
-        ),
-      ),
-  );
-
-
-  @override
-  Widget build(BuildContext context) {
-    return new StoreProvider(
-      store: store,
-      child: new StoreBuilder<ERAppState>(builder: (context, store) {
-        return new MaterialApp(
-            title: '拓意阅读',
-            debugShowCheckedModeBanner: true,
-            home: new MainPage(),
-            theme: store.state.themeData,
-          );
-      }),
-    );
-
-  }
-}
 
 class MainPage extends StatefulWidget {
   MainPage({Key key}) : super(key: key);
@@ -72,47 +36,47 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-         body:  Stack(
-           children: <Widget>[
-             new Offstage(
-               offstage: _pageIndex!=0,
-               child: _bodyPages[0],
-             ),
-             new Offstage(
-               offstage: _pageIndex!=1,
-               child: _bodyPages[1],
-             ),
-             new Offstage(
-               offstage: _pageIndex!=2,
-               child: _bodyPages[2],
-             ),
-           ],
-         ),
-//       body:_bodyPages[_pageIndex],
-         bottomNavigationBar:
-            Container(
-              height: 55,
-              child: new BottomNavigationBar(
-                items: [
-                  new BottomNavigationBarItem(
-                      icon:new Icon(Icons.home, size: 24.0),title:new Text("首页",style : new TextStyle(fontSize: 10,))
-                  ),
-                  new BottomNavigationBarItem(
-                      icon:new Icon(Icons.group, size: 24.0),title:new Text("社区",style : new TextStyle(fontSize: 10,))
-                  ),
-                  new BottomNavigationBarItem(
-                      icon:new Icon(Icons.person, size: 24.0),title:new Text("我的",style : new TextStyle(fontSize: 10,))
-                  ),
-                ],
-                type: BottomNavigationBarType.fixed,
-                currentIndex: _pageIndex,
-                onTap: (index) {
-                  setState(() {
-                    _pageIndex = index;
-                  });
-                },
-              ),
+      body:  Stack(
+        children: <Widget>[
+          new Offstage(
+            offstage: _pageIndex!=0,
+            child: _bodyPages[0],
           ),
+          new Offstage(
+            offstage: _pageIndex!=1,
+            child: _bodyPages[1],
+          ),
+          new Offstage(
+            offstage: _pageIndex!=2,
+            child: _bodyPages[2],
+          ),
+        ],
+      ),
+//       body:_bodyPages[_pageIndex],
+      bottomNavigationBar:
+      Container(
+        height: 55,
+        child: new BottomNavigationBar(
+          items: [
+            new BottomNavigationBarItem(
+                icon:new Icon(Icons.home, size: 24.0),title:new Text("首页",style : new TextStyle(fontSize: 10,))
+            ),
+            new BottomNavigationBarItem(
+                icon:new Icon(Icons.group, size: 24.0),title:new Text("社区",style : new TextStyle(fontSize: 10,))
+            ),
+            new BottomNavigationBarItem(
+                icon:new Icon(Icons.person, size: 24.0),title:new Text("我的",style : new TextStyle(fontSize: 10,))
+            ),
+          ],
+          type: BottomNavigationBarType.fixed,
+          currentIndex: _pageIndex,
+          onTap: (index) {
+            setState(() {
+              _pageIndex = index;
+            });
+          },
+        ),
+      ),
     );
 
   }

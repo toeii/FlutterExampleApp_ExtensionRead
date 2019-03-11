@@ -45,34 +45,25 @@ class _UserPageState extends State<UserPage> {
           flexibleSpace: FlexibleSpaceBar(
               centerTitle: true,
               title:new Container(
-                  padding:const EdgeInsets.fromLTRB(0,50,0,0),
-                  child: new Column(
-                    children: <Widget>[
-                      new Container(
-                        height: 200,
-                        width: _sizeWH.width,
-                        child: new Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            new Container(
-                              width: 90,
-                              height: 90,
-                              decoration: new BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: new DecorationImage(
-                                    image: new AssetImage("images/logo_extension_read.png"),fit: BoxFit.cover),
-                              ),
-                            ),
-                            new Container(
-                              margin:const EdgeInsets.fromLTRB(0,20,0,0),
-                              child: new Text("拓意阅读 v1.0",style: new TextStyle(fontSize: 18,color: Colors.white,fontWeight: FontWeight.bold),),
-                            ),
-                          ],
-                        ),
+                padding:const EdgeInsets.fromLTRB(0,40,0,0),
+                child: new Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  children: <Widget>[
+                    new Container(
+                      width: 90,
+                      height: 90,
+                      child : new CircleAvatar(
+                        backgroundImage:new AssetImage("images/logo_extension_read.png"),
                       ),
-                    ],
-                  )
+                    ),
+                    new Container(
+                      margin:const EdgeInsets.fromLTRB(0,20,0,0),
+                      child: new Text("拓意阅读 v1.0",style: new TextStyle(fontSize: 18,color: Colors.white,fontWeight: FontWeight.bold),),
+                    ),
+                  ],
+                ),
               )
           ),
         ),
