@@ -13,6 +13,13 @@ Build legendary Extension Read App in flutter.
 ### Egg
 <img src="https://github.com/toeii/FlutterExampleApp_ExtensionRead/blob/master/images/flutter_extension_read_egg.jpg" />
 
+### Download
+## Android apk
+<img src="https://github.com/toeii/FlutterExampleApp_ExtensionRead/blob/master/images/apk_download_code.jpg" />
+
+## iOS ipa
+sorry :cold_sweat: lack of certificate
+
 ### Framework
 
 | Lib (SDK v1.2.43)          |

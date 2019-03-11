@@ -12,6 +12,13 @@
 ### 脑图
 <img src="https://github.com/toeii/FlutterExampleApp_ExtensionRead/blob/master/images/flutter_extension_read_egg.jpg" />
 
+### 下载
+## Android apk
+<img src="https://github.com/toeii/FlutterExampleApp_ExtensionRead/blob/master/images/apk_download_code.jpg" />
+
+## iOS ipa
+暂无 :cold_sweat:
+
 ### 第三方框架
 
 | 库 (SDK v1.2.43)          |
