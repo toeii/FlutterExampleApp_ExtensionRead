@@ -4,7 +4,9 @@
 Build legendary Extension Read App in flutter.
 [中文点我](https://github.com/toeii/FlutterExampleApp_ExtensionRead/blob/master/README_CN.md)
 
-### Show some :heart: and star the repo to support the project
+## Other Versions
+
+[================ExtensionRead in Android Jetpack================](https://github.com/toeii/JetPackExampleApp_ExtensionRead)
 
 ### Screenshots
 <img src="https://github.com/toeii/FlutterExampleApp_ExtensionRead/blob/master/images/app_fotojet_01.jpg" />
@@ -38,6 +40,8 @@ sorry :cold_sweat: lack of certificate
 | **flutter_webview_plugin** |
 | **sqflite**                |
 | **photo_view**             |
+
+### Show some :heart: and star the repo to support the project
 
 ## License
 
