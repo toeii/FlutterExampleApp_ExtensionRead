@@ -3,7 +3,9 @@
 
 一款清新简单的信息类App。应用数据来源开眼api，项目简单易懂，对想学习Flutter的人非常友好
 
-### 如果对你有所帮助:heart:，欢迎提出issues和start
+## 其他版本
+
+[================拓意阅读Android Jetpack版================](https://github.com/toeii/JetPackExampleApp_ExtensionRead)
 
 ### 截图
 <img src="https://github.com/toeii/FlutterExampleApp_ExtensionRead/blob/master/images/app_fotojet_01.jpg" />
@@ -37,6 +39,8 @@
 | **flutter_webview_plugin** |
 | **sqflite**                |
 | **photo_view**             |
+
+### 如果对你有所帮助:heart:，欢迎提出issues和start
 
 ## License
 
